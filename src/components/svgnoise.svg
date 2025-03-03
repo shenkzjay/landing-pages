@@ -1,0 +1,30 @@
+<!-- <svg viewBox="0 0 250 250" xmlns="http://www.w3.org/2000/svg">
+  <filter id="noiseFilter">
+    <feTurbulence type="fractalNoise" baseFrequency="1" numOctaves="3" stitchTiles="stitch"
+    ></feTurbulence>
+  </filter>
+
+  <rect width="100%" height="100%" filter="url(#noiseFilter)"></rect>
+</svg> -->
+<svg xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="grungeFilter" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="3" result="turbulence"
+      ></feTurbulence>
+      <feDisplacementMap
+        in="SourceGraphic"
+        in2="turbulence"
+        scale="20"
+        xChannelSelector="R"
+        yChannelSelector="G"
+        result="displacement"></feDisplacementMap>
+      <feComposite in="SourceGraphic" in2="displacement" operator="over" result="composite"
+      ></feComposite>
+      <feComposite in="composite" in2="turbulence" operator="multiply" result="final"></feComposite>
+      <feColorMatrix in="final" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0"
+      ></feColorMatrix>
+    </filter>
+  </defs>
+
+  <rect width="100%" height="100%" fill="#ddd" filter="url(#noiseFilter)"></rect>
+</svg>

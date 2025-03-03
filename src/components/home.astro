@@ -44,7 +44,7 @@ const secondarygreen = "#6c7f24";
   <section class="flex flex-col gap-[150px]">
     <!-- hero section -->
     <div
-      class="md:text-[5rem] text-[3rem] leading-none flex flex-col text-center justify-center w-full items-center mt-20 relative h-full herowrapper overflow-clip"
+      class="md:text-[5rem] text-[3rem] leading-none flex flex-col text-center justify-center w-full items-center mt-28 relative h-full herowrapper overflow-clip"
     >
       <div class="md:w-[35rem] relative z-10 hero-fruits">
         <span
@@ -82,7 +82,7 @@ const secondarygreen = "#6c7f24";
       </div>
       <div class="overflow-hidden tray">
         <span class="flex [transform:translateY(0%)]">
-          <Image src={tray} height={100} width={300} alt={"banana svg"} class="" />
+          <Image src={tray} height={100} width={300} alt={"tray svg"} class="" />
         </span>
       </div>
     </div>
@@ -329,7 +329,7 @@ const secondarygreen = "#6c7f24";
         </div>
       </div>
 
-      <div class="flex absolute top-[40%] left-[20%] banner-fruits">
+      <div class="flex absolute top-[40%] md:left-[20%] banner-fruits overflow-x-clip">
         <span class="" style={`--c:1`}>
           <Image src={banana} height={100} width={100} alt={"banana svg"} />
         </span>
@@ -366,20 +366,18 @@ const secondarygreen = "#6c7f24";
         <h3 class="md:text-[4rem] text-[2rem] leading-none mb-20">Upcoming Events</h3>
       </div>
       <div class="flex flex-row justify-between upcomingevts p-6 gap-6">
-        <div id="demo" class="z-30 md:w-1/2">
+        <div id="demo" class="z-30 md:w-1/2 w-full">
           <div class="accordion-wrapper flex gap-6 flex-col">
             <details name="accordion" open>
               <summary>Happy Harvest Day</summary>
               <div class="details-content-wrapper">
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, aliquam. Veritatis
-                  consequatur, soluta molestiae voluptates accusamus qui odio, error, repellat rem
-                  harum id similique omnis quod dignissimos saepe quas mollitia.
+                  signifies the culmination of months of labor, celebrating the abundance of crops
+                  gathered from the fields.
                 </p>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, aliquam. Veritatis
-                  consequatur, soluta molestiae voluptates accusamus qui odio, error, repellat rem
-                  harum id similique omnis quod dignissimos saepe quas mollitia.
+                  It's a time for farmers to assess their yields and appreciate the fruits of their
+                  agricultural efforts
                 </p>
               </div>
             </details>
@@ -387,42 +385,50 @@ const secondarygreen = "#6c7f24";
               <summary>Sunshine Kids's Day</summary>
               <div class="details-content-wrapper">
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, aliquam. Veritatis
-                  consequatur, soluta molestiae voluptates accusamus qui odio, error, repellat rem
-                  harum id similique omnis quod dignissimos saepe quas mollitia.
+                  in an agricultural context could involve educating children about farming,
+                  fostering a connection to where their food comes from. Such events can inspire
+                  future generations to appreciate and participate in sustainable agricultural
+                  practices.
                 </p>
               </div>
             </details>
             <details name="accordion">
               <summary>Growers & life </summary>
               <div class="details-content-wrapper">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 <p>
-                  Dolor, aliquam. Veritatis consequatur, soluta molestiae voluptates accusamus qui
-                  odio, error, repellat rem harum id similique omnis quod dignissimos saepe quas
-                  mollitia.
+                  highlights the deep connection between farmers and the natural world, emphasizing
+                  how agriculture sustains communities.
+                </p>
+                <p>
+                  It underscores the vital role growers play in cultivating not just crops, but also
+                  the very fabric of life.
                 </p>
               </div>
             </details>
             <details name="accordion">
               <summary>Green Beyond the Light</summary>
               <div class="details-content-wrapper">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 <p>
-                  Dolor, aliquam. Veritatis consequatur, soluta molestiae voluptates accusamus qui
-                  odio, error, repellat rem harum id similique omnis quod dignissimos saepe quas
-                  mollitia.
+                  innovative agricultural practices, such as vertical farming or indoor growing,
+                  that push the boundaries of traditional cultivation.
+                </p>
+                <p>
+                  It signifies the pursuit of sustainable and efficient food production methods in a
+                  world facing environmental
                 </p>
               </div>
             </details>
+
             <details name="accordion">
-              <summary>Bloooms & Bouquests Fest </summary>
+              <summary>Blooms & Bouquests Fest </summary>
               <div class="details-content-wrapper">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 <p>
-                  Dolor, aliquam. Veritatis consequatur, soluta molestiae voluptates accusamus qui
-                  odio, error, repellat rem harum id similique omnis quod dignissimos saepe quas
-                  mollitia.
+                  celebrates the floral aspect of farming, showcasing the beauty and diversity of
+                  cultivated flowers.
+                </p>
+                <p>
+                  It can be a platform for showcasing horticultural expertise and promoting the
+                  cultivation of ornamental plants
                 </p>
               </div>
             </details>
@@ -1688,6 +1694,41 @@ const secondarygreen = "#6c7f24";
       width: 100%;
       height: 47rem;
       position: relative;
+    }
+
+    .banner-wrapper:hover .banner-fruits span:nth-child(1) {
+      transform: translate(-10rem, -13rem);
+      transition: transform 300ms 50ms;
+    }
+
+    .banner-wrapper:hover .banner-fruits span:nth-child(2) {
+      transform: translate(-3rem, -15rem);
+      transition: transform 300ms 100ms;
+    }
+
+    .banner-wrapper:hover .banner-fruits span:nth-child(3) {
+      transform: translate(2rem, -15rem);
+      transition: transform 300ms 150ms;
+    }
+
+    .banner-wrapper:hover .banner-fruits span:nth-child(4) {
+      transform: translate(6rem, -15rem);
+      transition: transform 300ms 200ms;
+    }
+
+    .banner-wrapper:hover .banner-fruits span:nth-child(5) {
+      transform: translate(9rem, -15rem);
+      transition: transform 300ms 250ms;
+    }
+
+    .banner-wrapper:hover .banner-fruits span:nth-child(6) {
+      transform: translate(14rem, -17rem) rotate(15deg);
+      transition: transform 300ms 300ms;
+    }
+
+    .banner-wrapper:hover .banner-fruits span:nth-child(7) {
+      transform: translate(18rem, -14rem) rotate(15deg);
+      transition: transform 300ms 350ms;
     }
   }
 </style>
