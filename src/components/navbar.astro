@@ -1,0 +1,48 @@
+---
+import Logo from "../../public/imgsvg/logo.astro";
+---
+
+<nav class="flex justify-between items-center mt-6 mx-6 md:mx-0">
+  <div class="flex gap-2 items-center">
+    <span><Logo /></span>
+    <div class="leading-none tracking-wide text-[#707070]">
+      <h2>Sunshine</h2>
+      <h2>Harvest</h2>
+      <h2>Market</h2>
+    </div>
+  </div>
+  <ul class="md:flex flex-row gap-6 items-center justify-center hidden">
+    <li><a>About</a></li>
+    <li><a>Contact us</a></li>
+    <li>
+      <div class="flex justify-center items-center">
+        <button
+          class="bg-[#6C7F24] text-[#f1e8d6] readmore group gap-2 cursor-pointer text-base flex flex-row items-center justify-center py-2 px-5 rounded-xl"
+        >
+          <p class="flex">Plan your visit</p>
+          <span class="bg-[#f1e8d6] flex rounded-full"></span>
+        </button>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<style>
+  h2 {
+    font-family: "Gasoek One", serif;
+  }
+
+  .readmore span {
+    /* display: none; */
+    width: -1;
+    height: -1;
+    transition: all 300ms;
+  }
+
+  .readmore:hover span {
+    /* display: flex; */
+    width: 0.75rem;
+    height: 0.75rem;
+    transition: all 300ms;
+  }
+</style>

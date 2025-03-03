@@ -1,0 +1,1742 @@
+---
+import { Image } from "astro:assets";
+import Navbar from "./navbar.astro";
+import banana from "../../public/imgsvg/banana.svg";
+import pear from "../../public/imgsvg/pear.svg";
+import grape from "../../public/imgsvg/grape.svg";
+import strawberry from "../../public/imgsvg/strawberry.svg";
+import tomatoes from "../../public/imgsvg/tomatoes.svg";
+import onions from "../../public/imgsvg/onion.svg";
+import carrot from "../../public/imgsvg/carrot.svg";
+import brocolli from "../../public/imgsvg/brocolli.svg";
+import tray from "../../public/imgsvg/tray.svg";
+import starspark from "../../public/imgsvg/starspark.svg";
+import market from "../../public/imgsvg/market.png";
+import farmview from "../../public/imgsvg/farmview.png";
+import farmer from "../../public/imgsvg/farmer.png";
+import apple from "../../public/imgsvg/apple.png";
+import farm from "../../public/imgsvg/farm.png";
+import malefarmer from "../../public/imgsvg/malefarmer.png";
+import star6 from "../../public/imgsvg/Star 13.svg";
+import Location from "../../public/imgsvg/location.astro";
+import Time from "../../public/imgsvg/time.astro";
+import Calender from "../../public/imgsvg/calender.astro";
+import Youtube from "../../public/imgsvg/youtube.astro";
+import Instagram from "../../public/imgsvg/instagram.astro";
+import Facebook from "../../public/imgsvg/facebook.astro";
+import Logo from "../../public/imgsvg/logo.astro";
+import femalefarmer from "../../public/imgsvg/femalefarmer.png";
+import africanfarmer from "../../public/imgsvg/meetfarmer.png";
+import southfarmer from "../../public/imgsvg/southfarmer.png";
+import Github from "../../public/imgsvg/github.astro";
+import Linkedin from "../../public/imgsvg/linkedin.astro";
+import X from "../../public/imgsvg/x.astro";
+import Globe from "../../public/imgsvg/globe.astro";
+
+const sandbrown = "#f1e8d6";
+const primarygreen = "#37420f";
+const secondarygreen = "#6c7f24";
+---
+
+<div class="md:container md:mx-auto">
+  <Navbar />
+
+  <section class="flex flex-col gap-[150px]">
+    <!-- hero section -->
+    <div
+      class="md:text-[5rem] text-[3rem] leading-none flex flex-col text-center justify-center w-full items-center mt-20 relative h-full herowrapper overflow-clip"
+    >
+      <div class="md:w-[35rem] relative z-10 hero-fruits">
+        <span
+          class="absolute md:top-[50%] md:left-[50%] [transform:translate(-10rem,10rem)]"
+          style={`--a:8`}
+        >
+          <Image src={pear} height={100} width={50} alt={"pear svg"} />
+        </span>
+        <span class="absolute top-[50%] left-[50%]" style={`--a:7`}>
+          <Image src={strawberry} height={100} width={60} alt={"strawberry svg"} />
+        </span>
+        <span class="absolute top-[50%] left-[50%]" style={`--a:6`}>
+          <Image src={brocolli} height={100} width={70} alt={"brocolli svg"} />
+        </span>
+        <span class="absolute top-[50%] left-[50%]" style={`--a:5`}>
+          <Image src={banana} height={100} width={100} alt={"banana svg"} />
+        </span>
+
+        <span class="absolute top-[50%] left-[50%]" style={`--a:4`}>
+          <Image src={grape} height={100} width={100} alt={"grape svg"} />
+        </span>
+        <span class="absolute top-[50%] left-[50%] [transform:rotate(30deg)]" style={`--a:3`}>
+          <Image src={onions} height={100} width={40} alt={"onions svg"} />
+        </span>
+
+        <span class="absolute top-[50%] left-[50%]" style={`--a:2`}>
+          <Image src={tomatoes} height={100} width={70} alt={"banana svg"} />
+        </span>
+
+        <span class="absolute top-[50%] left-[50%] [transform:scale(-1,1)]" style={`--a:1`}>
+          <Image src={carrot} height={100} width={200} alt={"carrot svg"} />
+        </span>
+
+        <h2 class="flex items-center mx-6 md:mx-0">Farm Fresh Goodness For Your Table</h2>
+      </div>
+      <div class="overflow-hidden tray">
+        <span class="flex [transform:translateY(0%)]">
+          <Image src={tray} height={100} width={300} alt={"banana svg"} class="" />
+        </span>
+      </div>
+    </div>
+
+    <!-- sponsors -->
+    <section>
+      <!-- <div class="w-full flex justify-end">
+        <svg
+          width="1070"
+          height="46"
+          viewBox="0 0 1070 46"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            id="arc"
+            d="M0.5 41.0001C93.3333 27.1668 315.1 -0.19988 459.5 1.00012C603.9 2.20012 926 30.8334 1069 45"
+            stroke="black"></path>
+          <text font-size="16" fill="black">
+            <textPath xlink:href="#arc" startOffset="10%">Heelo how are you doing</textPath>
+          </text>
+        </svg>
+      </div> -->
+
+      <!-- who we are -->
+      <section class="flex flex-col md:flex-row">
+        <div class="md:w-1/2 flex flex-col gap-6 whoweare mx-6 md:mx-0">
+          <div class="overflow-clip tag">
+            <p class="[transform:translateY(0px)]">WHO WE ARE</p>
+          </div>
+          <span class="overflow-clip">
+            <Image
+              src={starspark}
+              height={100}
+              width={50}
+              alt={"banana svg"}
+              class="[transform:translateY(0px)]"
+            />
+          </span>
+          <div class="overflow-clip title">
+            <h3 class="md:text-[4rem] text-[2rem] leading-none [transform:translateY(0px)]">
+              A Walk-in Community Farmers' Market
+            </h3>
+          </div>
+          <div class="whoweare-text overflow-clip">
+            <p class="[transform:translateY(0px)] text-balance">
+              We're a walk-in community farmers' market dedicated to providing the freshest flavors
+              for your table. From crisp vegetables and fruits to the rarest spices and natural
+              ingredients. Everything we offer is rooted in quality, care and sustainability
+            </p>
+          </div>
+        </div>
+        <div class="md:w-1/2 flex justify-center whoweare-img mt-24 md:mt-0 mx-6 md:mx-0">
+          <div class="imageclippath [transform:translateX(0)]">
+            <span class="flex">
+              <Image
+                src={market}
+                height={500}
+                width={800}
+                alt={"a blacked guy with a pink dyed hair in the market buying oranges"}
+                class="z-30 absolute left-0 w-full -top-10 h-[27rem] object-cover md:[transform:rotate(5deg)] imagine rounded-xl md:m-2"
+              />
+            </span>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- banner -->
+    <section class="">
+      <div class="bannerbg flex justify-center items-center banner-section">
+        <span class="absolute -bottom-24 -left-24 z-30">
+          <Image src={star6} height={100} width={300} alt="star shape" class="flex object-cover" />
+        </span>
+        <div
+          class="relative text-white md:text-4xl text-[1.5rem] z-30 md:w-[58%] md:leading-11 md:tracking-wide flex flex-col gap-6"
+        >
+          <h3 class="text-center md:text-balance mx-6 md:mx-0">
+            Our market is more than just a place to shop, it's a celebration of the farmers,
+            traderss and families who keep our community thriving
+          </h3>
+          <div class="flex justify-center items-center">
+            <button
+              class="readmore group gap-2 cursor-pointer text-base flex flex-row items-center justify-center border border-white py-2 px-5 rounded-xl"
+            >
+              <p class="flex">Read our story</p>
+              <span class="bg-[#f1e8d6] rounded-full"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Meet our farmers -->
+    <section>
+      <div class="flex justify-center flex-col items-center gap-6">
+        <span class="">
+          <Image src={starspark} height={100} width={50} alt={"banana svg"} />
+        </span>
+        <h3 class="md:text-[4rem] text-[2rem] leading-none mb-20">Meet Our Farmers</h3>
+      </div>
+      <div
+        class="flex mx-6 md:flex-row flex-col gap-16 meetfarmers md:overflow-x-scroll overflow-y-hidden"
+      >
+        <div>
+          <div class="meetImg first mt-12">
+            <div class="flex overflow-hidden">
+              <Image
+                src={africanfarmer}
+                height={500}
+                width={500}
+                alt={"a blacked guy with a pink dyed hair in the market buying oranges"}
+                class="z-30 absolute left-0 w-full -top-10 h-[22rem] object-cover md:[transform:rotate(3deg)] imagine rounded-xl md:m-2"
+              />
+              <div
+                class="z-30 absolute top-6 right-6 flex-col gap-24 w-1/2 h-full detailText hidden"
+              >
+                <div class="flex flex-row justify-between">
+                  <div class="text-[#f1e8d6]">
+                    <p class="py-1 font-semibold">Ademola Shola</p>
+                    <p class="text-sm">Grain Specialist</p>
+                  </div>
+                  <div class="flex flex-row gap-4 justify-center items-center">
+                    <button class="flex bg-[#f1e8d6] px-4 py-2 rounded-lg text-[#37420f]"
+                      >Grains</button
+                    >
+                    <button class="flex bg-[#f1e8d6] px-4 py-2 rounded-lg text-[#37420f]"
+                      >Crops</button
+                    >
+                  </div>
+                </div>
+                <div class="text-[#f1e8d6]">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus laboriosam,
+                  mollitia provident, porro ipsa architecto voluptatem, libero ab nobis modi quo
+                  quidem reiciendis. Earum suscipit inventore hic ab cupiditate obcaecati.
+                </div>
+              </div>
+            </div>
+            <div class="z-30 absolute bottom-6 left-6 flex gap-4 [rotate:1deg] bottomText">
+              <p class="text-[#f1e8d6] py-2">Ademola Shola</p>
+              <button class="bg-[#f1e8d6] px-4 py-2 rounded-xl">Grains</button>
+              <button class="bg-[#f1e8d6] px-4 py-2 rounded-xl">Crops</button>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="meetImg second mt-12">
+            <div class="flex overflow-hidden">
+              <Image
+                src={femalefarmer}
+                height={500}
+                width={500}
+                alt={"a blacked guy with a pink dyed hair in the market buying oranges"}
+                class="z-30 absolute left-0 w-full -top-10 h-[22rem] object-cover md:[transform:rotate(3deg)] imagine rounded-xl md:m-2"
+              />
+              <div
+                class="z-30 absolute top-6 right-6 flex-col gap-24 w-1/2 h-full detailText hidden"
+              >
+                <div class="flex flex-row justify-between">
+                  <div class="text-[#f1e8d6]">
+                    <p class="py-1 font-semibold">Mitchel Andresa</p>
+                    <p class="text-sm">Fruits Expert</p>
+                  </div>
+                  <div class="flex flex-row gap-4 justify-center items-center">
+                    <button class="flex bg-[#f1e8d6] px-4 py-2 rounded-xl">Fruits</button>
+                    <button class="flex bg-[#f1e8d6] px-4 py-2 rounded-xl">Gardens</button>
+                  </div>
+                </div>
+                <div class="text-[#f1e8d6]">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus laboriosam,
+                  mollitia provident, porro ipsa architecto voluptatem, libero ab nobis modi quo
+                  quidem reiciendis. Earum suscipit inventore hic ab cupiditate obcaecati.
+                </div>
+              </div>
+            </div>
+            <div class="z-30 absolute bottom-6 left-6 flex gap-4 [rotate:1deg] bottomText">
+              <p class="text-[#f1e8d6] py-2">Mitchel Andresa</p>
+              <button class="bg-[#f1e8d6] px-4 py-2 rounded-xl">Fruits</button>
+              <button class="bg-[#f1e8d6] px-4 py-2 rounded-xl">Gardens</button>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="meetImg third mt-12">
+            <div class="flex overflow-hidden">
+              <Image
+                src={southfarmer}
+                height={500}
+                width={500}
+                alt={"a blacked guy with a pink dyed hair in the market buying oranges"}
+                class="z-30 absolute left-0 w-full -top-10 h-[22rem] object-cover md:[transform:rotate(3deg)] imagine rounded-xl md:m-2"
+              />
+              <div
+                class="z-30 absolute top-6 right-6 flex-col gap-24 w-1/2 h-full detailText hidden"
+              >
+                <div class="flex flex-row justify-between">
+                  <div>
+                    <p class="text-[#f1e8d6] font-semibold py-2">Carlos Marvelas</p>
+                    <p class="text-[#f1e8d6] text-sm">Spice Expert</p>
+                  </div>
+                  <div class="flex flex-row gap-4 justify-center items-center">
+                    <button class="flex bg-[#f1e8d6] px-4 py-2 rounded-lg">Spice</button>
+                    <button class="flex bg-[#f1e8d6] px-4 py-2 rounded-lg">herbs</button>
+                  </div>
+                </div>
+                <div class="text-[#f1e8d6]">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus laboriosam,
+                  mollitia provident, porro ipsa architecto voluptatem, libero ab nobis modi quo
+                  quidem reiciendis. Earum suscipit inventore hic ab cupiditate obcaecati.
+                </div>
+              </div>
+            </div>
+            <div class="z-30 absolute bottom-6 left-6 flex gap-4 [rotate:1deg] bottomText">
+              <p class="text-[#f1e8d6] py-2">Carlos Marvelas</p>
+              <button class="bg-[#f1e8d6] px-4 py-2 rounded-lg">Spice</button>
+              <button class="bg-[#f1e8d6] px-4 py-2 rounded-lg">herbs</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- animated banner -->
+    <section class="relative banner-wrapper overflow-clip">
+      <div class="bannerbg flex justify-center items-center z-10">
+        <span class="absolute -bottom-24 -left-24 z-30">
+          <Image src={star6} height={100} width={300} alt="star shape" class="flex object-cover" />
+        </span>
+        <div
+          class="relative text-white md:text-4xl text-[1.5rem] z-30 md:w-[58%] leading-11 tracking-wide flex flex-col gap-6"
+        >
+          <h3 class="text-center md:text-balance mx-6 md:mx-0">
+            Our market is more than just a place to shop, it's a celebration of the farmers,
+            traderss and familiesa who keep our community thriving
+          </h3>
+          <div class="flex justify-center items-center">
+            <button
+              class="readmore group gap-2 cursor-pointer text-base flex flex-row items-center justify-center border border-white py-2 px-5 rounded-xl"
+            >
+              <p class="flex">Read our story</p>
+              <span class="bg-[#f1e8d6] rounded-full"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex absolute top-[40%] left-[20%] banner-fruits">
+        <span class="" style={`--c:1`}>
+          <Image src={banana} height={100} width={100} alt={"banana svg"} />
+        </span>
+        <span class="" style={`--c:2`}>
+          <Image src={pear} height={100} width={50} alt={"pear svg"} />
+        </span>
+        <span class="" style={`--c:3`}>
+          <Image src={grape} height={100} width={100} alt={"grape svg"} />
+        </span>
+        <span class="" style={`--c:4`}>
+          <Image src={strawberry} height={100} width={60} alt={"strawberry svg"} />
+        </span>
+        <span class="" style={`--c:5`}>
+          <Image src={tomatoes} height={100} width={70} alt={"banana svg"} />
+        </span>
+        <span class="[transform:rotate(30deg)]" style={`--c:6`}>
+          <Image src={onions} height={100} width={40} alt={"onions svg"} />
+        </span>
+        <span class="[transform:scale(-1,1)]" style={`--c:7`}>
+          <Image src={carrot} height={100} width={200} alt={"carrot svg"} />
+        </span>
+        <!-- <span class="">
+          <Image src={brocolli} height={100} width={70} alt={"brocolli svg"} />
+        </span> -->
+      </div>
+    </section>
+
+    <!-- upcoming events -->
+    <section class="">
+      <div class="flex flex-col items-center justify-center gap-6">
+        <span class="">
+          <Image src={starspark} height={100} width={50} alt={"banana svg"} />
+        </span>
+        <h3 class="md:text-[4rem] text-[2rem] leading-none mb-20">Upcoming Events</h3>
+      </div>
+      <div class="flex flex-row justify-between upcomingevts p-6 gap-6">
+        <div id="demo" class="z-30 md:w-1/2">
+          <div class="accordion-wrapper flex gap-6 flex-col">
+            <details name="accordion" open>
+              <summary>Happy Harvest Day</summary>
+              <div class="details-content-wrapper">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, aliquam. Veritatis
+                  consequatur, soluta molestiae voluptates accusamus qui odio, error, repellat rem
+                  harum id similique omnis quod dignissimos saepe quas mollitia.
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, aliquam. Veritatis
+                  consequatur, soluta molestiae voluptates accusamus qui odio, error, repellat rem
+                  harum id similique omnis quod dignissimos saepe quas mollitia.
+                </p>
+              </div>
+            </details>
+            <details name="accordion">
+              <summary>Sunshine Kids's Day</summary>
+              <div class="details-content-wrapper">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, aliquam. Veritatis
+                  consequatur, soluta molestiae voluptates accusamus qui odio, error, repellat rem
+                  harum id similique omnis quod dignissimos saepe quas mollitia.
+                </p>
+              </div>
+            </details>
+            <details name="accordion">
+              <summary>Growers & life </summary>
+              <div class="details-content-wrapper">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p>
+                  Dolor, aliquam. Veritatis consequatur, soluta molestiae voluptates accusamus qui
+                  odio, error, repellat rem harum id similique omnis quod dignissimos saepe quas
+                  mollitia.
+                </p>
+              </div>
+            </details>
+            <details name="accordion">
+              <summary>Green Beyond the Light</summary>
+              <div class="details-content-wrapper">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p>
+                  Dolor, aliquam. Veritatis consequatur, soluta molestiae voluptates accusamus qui
+                  odio, error, repellat rem harum id similique omnis quod dignissimos saepe quas
+                  mollitia.
+                </p>
+              </div>
+            </details>
+            <details name="accordion">
+              <summary>Bloooms & Bouquests Fest </summary>
+              <div class="details-content-wrapper">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p>
+                  Dolor, aliquam. Veritatis consequatur, soluta molestiae voluptates accusamus qui
+                  odio, error, repellat rem harum id similique omnis quod dignissimos saepe quas
+                  mollitia.
+                </p>
+              </div>
+            </details>
+          </div>
+        </div>
+        <div class="md:w-1/2 relative hidden md:flex">
+          <span class="flex h-full image1 absolute top-0 photo z-50">
+            <Image
+              src={malefarmer}
+              height={500}
+              width={800}
+              alt={"a blacked guy with a pink dyed hair in the market buying oranges"}
+              class="z-30 object-cover h-auto rounded-xl"
+            />
+          </span>
+          <span class="flex h-full image2 absolute top-0 photo z-40">
+            <Image
+              src={farm}
+              height={500}
+              width={800}
+              alt={"a blacked guy with a pink dyed hair in the market buying oranges"}
+              class="z-30 object-cover h-auto rounded-xl"
+            />
+          </span>
+          <span class="flex h-full image3 absolute top-0 photo z-30">
+            <Image
+              src={apple}
+              height={500}
+              width={800}
+              alt={"a blacked guy with a pink dyed hair in the market buying oranges"}
+              class="z-30 object-cover h-auto rounded-xl"
+            />
+          </span>
+          <span class="flex h-full image4 absolute top-0 photo">
+            <Image
+              src={farmview}
+              height={500}
+              width={800}
+              alt={"a blacked guy with a pink dyed hair in the market buying oranges"}
+              class="z-30 object-cover h-auto rounded-xl"
+            />
+          </span>
+          <span class="flex h-full image5 absolute top-0 photo">
+            <Image
+              src={farmer}
+              height={500}
+              width={800}
+              alt={"a blacked guy with a pink dyed hair in the market buying oranges"}
+              class="z-30 object-cover h-auto rounded-xl"
+            />
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- plan your visits/testimonials -->
+    <section>
+      <div class="flex md:flex-row flex-col gap-6">
+        <div class="md:w-1/2">
+          <div class="testimonial">
+            <span class="flex overflow-hidden">
+              <Image
+                src={market}
+                height={500}
+                width={800}
+                alt={"a blacked guy with a pink dyed hair in the market buying oranges"}
+                class="z-10 absolute left-0 w-full -top-10 h-[43rem] brightness-60 object-cover rounded-xl md:m-2"
+              />
+            </span>
+            <div class="flex w-full h-full relative overflow-clip">
+              <div class="flex top-[25%] gap-10 absolute left-[25%] testimonialscroll">
+                <div
+                  class="active p-4 text-sm font-medium text-balance flex flex-col testimonialcard justify-between gap-4 items-center text-center"
+                >
+                  <span class="leading-0 text-4xl">ˮ</span>
+                  <p class="text-sm">
+                    I love knowing where my food comes from and this market makes that easy. The
+                    homemade honey and fresh herbs are a must try
+                  </p>
+                  <p class="text-sm">- Mary Signs</p>
+                </div>
+
+                <div
+                  class="active p-4 text-sm font-medium text-balance flex flex-col testimonialcard justify-between gap-4 items-center text-center"
+                >
+                  <span class="leading-0 text-4xl">ˮ</span>
+                  <p class="text-sm">
+                    I love knowing where my food comes from and this market makes that easy. The
+                    homemade honey and fresh herbs are a must try
+                  </p>
+                  <p class="text-sm">- Jake Thomas Signs</p>
+                </div>
+
+                <div
+                  class="active p-4 text-sm font-medium text-balance flex flex-col testimonialcard justify-between gap-4 items-center text-center"
+                >
+                  <span class="leading-0 text-4xl">ˮ</span>
+                  <p class="text-sm">
+                    I love knowing where my food comes from and this market makes that easy. The
+                    homemade honey and fresh herbs are a must try
+                  </p>
+                  <p class="text-sm">- Thomas Signs</p>
+                </div>
+
+                <div
+                  class="active p-4 text-sm font-medium text-balance flex flex-col testimonialcard justify-between gap-4 items-center text-center"
+                >
+                  <span class="leading-0 text-4xl">ˮ</span>
+                  <p class="text-sm">
+                    I love knowing where my food comes from and this market makes that easy. The
+                    homemade honey and fresh herbs are a must try
+                  </p>
+                  <p class="text-sm">- Thomas Outtarra</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="md:w-1/2 z-10 flex flex-col">
+          <div class="testimonial gap-8 flex flex-col">
+            <div class="absolute z-10 p-6 text-[#F1E8D6]">
+              <p class="text-sm">WANT TO COME AROUND WITHIN THE MONTH?</p>
+              <p class="text-sm">HELP US PREPARE FOR YOU SPECIALLY</p>
+              <span class="">
+                <Image src={starspark} height={100} width={50} alt={"banana svg"} />
+              </span>
+
+              <h3 class="md:text-4xl text-[1.5rem] tracking-wide">Plan your visit</h3>
+
+              <div>
+                <div class="flex flex-wrap gap-4 md:my-8 my-6">
+                  <div class="flex w-fit items-center gap-2 py-1 px-2 bg-[#F1E8D6]/10 rounded-lg">
+                    <Location />
+                    <p>101001, Motion Park, CA</p>
+                  </div>
+
+                  <div class="flex w-fit items-center gap-2 py-1 px-2 bg-[#F1E8D6]/10 rounded-lg">
+                    <Time />
+                    <p>9am - 6pm</p>
+                  </div>
+
+                  <div class="flex w-fit items-center gap-2 py-1 px-2 bg-[#F1E8D6]/10 rounded-lg">
+                    <Calender />
+                    <p>Saturdays & Sundays, year round</p>
+                  </div>
+                </div>
+
+                <form class="flex flex-col gap-8">
+                  <div class="flex flex-col">
+                    <label for="arrivaldate" class="text-[#F1E8D6]/60 text-sm"
+                      >What day would you like to come?</label
+                    >
+                    <input
+                      class="pt-2 pb-1 border-b focus:border-b focus:outline-0 focus:ring-0"
+                      type="date"
+                      name="arrivaldate"
+                      id="arrivaldate"
+                      placeholder="Choose your preferred date"
+                    />
+                  </div>
+
+                  <div class="flex flex-col">
+                    <label for="email" class="text-[#F1E8D6]/60 text-sm"
+                      >What produce are you interested in?</label
+                    >
+                    <select
+                      class="pt-2 pb-1 border-b focus:border-b focus:outline-0 focus:ring-0 text-[#F1E8D6]"
+                    >
+                      <option class="text-[#F1E8D6]">Choose category</option>
+                      <option>Grains</option>
+                      <option>Fruits</option>
+                      <option>Tubers</option>
+                    </select>
+                  </div>
+
+                  <div class="flex flex-col">
+                    <label for="email" class="text-[#F1E8D6]/60 text-sm"
+                      >How do we contact you?</label
+                    >
+                    <input
+                      class="pt-2 pb-1 border-b focus:border-b focus:outline-0 focus:ring-0 placeholder:text-[#F1E8D6]"
+                      type="email"
+                      name="email"
+                      id="email"
+                      placeholder="Enter your email address"
+                    />
+                  </div>
+
+                  <button
+                    class="pointer-events-none select-none cursor-none mt-4 bg-[#F1E8D6] py-4 px-6 text-[#37420f] font-bold w-full rounded-xl"
+                    >Submit
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- a market for the community -->
+    <section class="">
+      <div class="upcomingevts flex justify-center items-center p-24">
+        <span class="absolute -bottom-24 -left-24 z-30">
+          <Image src={star6} height={100} width={300} alt="star shape" class="flex object-cover" />
+        </span>
+        <div
+          class="relative text-white md:text-4xl text-[1.5rem] z-30 md:w-[58%] md:leading-11 tracking-wide flex flex-col gap-6"
+        >
+          <h3 class="text-center md:text-balance">A Market for the community, by the community.</h3>
+          <div class="flex justify-center items-center"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+      <div class="flex md:flex-row flex-col justify-between gap-20 mx-6">
+        <div class="md:w-2/5 flex flex-col gap-6">
+          <div class="flex gap-2 items-center">
+            <span><Logo /></span>
+            <div class="leading-none tracking-wide text-[#707070]">
+              <h2>Sunshine</h2>
+              <h2>Harvest</h2>
+              <h2>Market</h2>
+            </div>
+          </div>
+          <p class="text-balance">
+            Sunshine Harvest Market is a community Farmer's market concept by Oluremi David The idea
+            is for amodern market that caters to locals, families and individuals seeking fresh
+            produce, sustainable, living and support for local businesses. The landing page design
+            aims to inform visitors, encourage in-person attendance animated highlight local
+            farmers' contributions.
+          </p>
+        </div>
+        <div class="md:w-1/5">
+          <ul class="flex flex-col gap-4">
+            <li class="font-bold">FEATURES</li>
+            <li>Produce Categories</li>
+            <li>Meet our farmers</li>
+            <li>Gallery</li>
+            <li>About us</li>
+          </ul>
+        </div>
+        <div class="md:w-1/5">
+          <ul class="flex flex-col gap-4">
+            <li class="font-bold">SUPPORT</li>
+            <li>Contact us</li>
+            <li>FAQs</li>
+            <li>Give us feedback</li>
+          </ul>
+        </div>
+        <div class="md:w-1/5">
+          <ul class="flex flex-col gap-4">
+            <li class="font-bold">SOCIALS</li>
+            <li class="flex flex-row gap-4">
+              <span>
+                <Facebook />
+              </span>
+              <span>
+                <Instagram />
+              </span>
+              <span>
+                <Youtube />
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="flex md:flex-row flex-col justify-between mt-[100px] mx-6">
+        <div>
+          <p>All names, addresses and information are fictional</p>
+          <p>&copy Copyright 2025</p>
+        </div>
+        <div class="flex md:flex-row flex-col gap-6 mt-6 md:mt-0">
+          <div class="flex flex-col gap-2">
+            <p class="text-xs">designed by</p>
+            <p><i class="font-bold">Oluremi David</i></p>
+            <div class="flex gap-2">
+              <a
+                class="hover:[transform:translateY(-5px)] transition-[transform_300ms_ease]"
+                href="https://www.linkedin.com/in/remii-david/"
+                target="_blank"><Linkedin /></a
+              >
+              <a
+                class="hover:[transform:translateY(-5px)] transition-[transform_300ms_ease]"
+                href="http://x.com/remiidavid"
+                target="_blank"><X /></a
+              >
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <p class="text-xs">developed by</p>
+            <p><i class="font-bold">Olajide Seun</i></p>
+            <div class="flex gap-2">
+              <a
+                class="hover:[transform:translateY(-5px)] transition-[transform_300ms_ease]"
+                href="https://www.linkedin.com/in/oluwaseun-olajide-05017a124"
+                target="_blank"><Linkedin /></a
+              >
+              <a
+                class="hover:[transform:translateY(-5px)] transition-[transform_300ms_ease]"
+                href="https://seunolajide.vercel.app/"><Globe /></a
+              >
+              <a
+                class="hover:[transform:translateY(-5px)] transition-[transform_300ms_ease]"
+                href="https://github.com/shenkzjay"><Github /></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </section>
+</div>
+
+<style>
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: "Gasoek One", serif;
+  }
+
+  @font-face {
+    font-family: "Gasoek One", serif;
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Host Grotesk", serif;
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  .readmore span {
+    /* display: none; */
+    width: -1;
+    height: -1;
+    transition: all 300ms;
+  }
+
+  .readmore:hover span {
+    /* display: flex; */
+    width: 0.75rem;
+    height: 0.75rem;
+    transition: all 300ms;
+  }
+
+  .imageclippath {
+    width: 25rem;
+    height: 30rem;
+    position: relative;
+  }
+
+  .imageclippath::before {
+    content: "";
+    position: absolute;
+    border-radius: 20px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    background: #6c7f24;
+
+    clip-path: polygon(
+      0% 12%,
+      7% 20%,
+      0% 15%,
+      0% 85%,
+      8% 82%,
+      0% 90%,
+      0% 100%,
+      100% 100%,
+      96% 94%,
+      100% 94%,
+      100% 0%,
+      0% 0%,
+      0% 8%
+    );
+  }
+
+  html {
+    scroll-timeline: --scrollwell y;
+  }
+
+  .herowrapper {
+    /* overflow-y: scroll; */
+  }
+
+  .hero-fruits span {
+    transition: all 1s;
+    transform: scale(1);
+    animation: scrollTo 1s calc(var(--a) * 100ms) linear forwards;
+    /* animation-timeline: --scrollwell;
+    animation-range: 0vh 90vh; */
+  }
+
+  .hero-fruits span:nth-child(1) {
+    animation: scroller auto both;
+  }
+
+  .hero-fruits span:nth-child(2) {
+    animation: scroller2 auto both;
+  }
+
+  .hero-fruits span:nth-child(3) {
+    animation: scroller3 auto both;
+  }
+
+  .hero-fruits span:nth-child(4) {
+    animation: scroller4 auto both;
+  }
+
+  .hero-fruits span:nth-child(5) {
+    animation: scroller5 auto both;
+  }
+
+  .hero-fruits span:nth-child(6) {
+    animation: scroller6 auto both;
+  }
+
+  .hero-fruits span:nth-child(7) {
+    animation: scroller7 auto both;
+  }
+
+  .hero-fruits span:nth-child(8) {
+    animation: scroller8 auto both;
+  }
+
+  .tray span {
+    animation: scroller9 auto both;
+  }
+
+  .whoweare-img {
+    animation: revealimage auto both;
+  }
+
+  .whoweare > .tag > p,
+  .whoweare span img,
+  .whoweare > .title > h3,
+  .whoweare-text > p {
+    animation: revealtext auto both;
+  }
+
+  .whoweare > .tag > p,
+  .whoweare span img,
+  .whoweare > .title > h3,
+  .whoweare-text > p,
+  .whoweare-img {
+    animation-timeline: --scrollwell;
+    animation-range: 20vh 100vh;
+  }
+
+  .banner-section {
+    animation: scalebanner auto linear;
+    animation-timeline: --scrollwell;
+    animation-range: 60vh 150vh;
+  }
+
+  @keyframes scroller {
+    from {
+      transform: translate(-280px, -150px);
+    }
+
+    to {
+      transform: translate(-120px, 200px);
+    }
+  }
+
+  @keyframes scroller2 {
+    from {
+      transform: translate(180px, -130px);
+    }
+
+    to {
+      transform: translate(60px, 200px);
+    }
+  }
+
+  @keyframes scroller3 {
+    from {
+      transform: translate(-260px, -70px);
+    }
+
+    to {
+      transform: translate(-100px, 250px);
+    }
+  }
+
+  @keyframes scroller4 {
+    from {
+      transform: translate(130px, -30px);
+    }
+
+    to {
+      transform: translate(30px, 230px);
+    }
+  }
+
+  @keyframes scroller5 {
+    from {
+      transform: translate(-250px, 20px);
+    }
+
+    to {
+      transform: translate(-30px, 270px);
+    }
+  }
+
+  @keyframes scroller6 {
+    from {
+      transform: translate(180px, -10px) rotate(-30deg);
+    }
+
+    to {
+      transform: translate(30px, 230px) rotate(-60deg);
+    }
+  }
+
+  @keyframes scroller7 {
+    from {
+      transform: translate(-160px, 120px);
+    }
+
+    to {
+      transform: translate(-50px, 220px);
+    }
+  }
+
+  @keyframes scroller8 {
+    from {
+      transform: translate(-80px, 130px) scale(-1, 1);
+    }
+
+    to {
+      transform: translate(-80px, 170px) scale(-1, 1) rotate(15deg);
+    }
+  }
+
+  @keyframes scroller9 {
+    from {
+      transform: translateY(100%);
+    }
+  }
+
+  @keyframes revealtext {
+    from {
+      transform: translateY(100%);
+    }
+  }
+
+  @keyframes revealimage {
+    from {
+      clip-path: inset(0% 60% 0% 53%);
+    }
+    to {
+      clip-path: inset(-15% 0% 0% 0%);
+    }
+  }
+
+  @keyframes scalebanner {
+    from {
+      transform: scale(1.3);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+
+  .hero-fruits span:nth-child(1),
+  .hero-fruits span:nth-child(2),
+  .hero-fruits span:nth-child(3),
+  .hero-fruits span:nth-child(4),
+  .hero-fruits span:nth-child(5),
+  .hero-fruits span:nth-child(6),
+  .hero-fruits span:nth-child(7),
+  .hero-fruits span:nth-child(8),
+  .tray span {
+    animation-timeline: --scrollwell;
+    animation-range: 0vh 25vh;
+  }
+
+  @keyframes scrollTo {
+    from {
+      position: absolute;
+      top: 50%;
+      left: 40%;
+      right: 50%;
+      bottom: 50%;
+
+      transform: scale(0.2);
+      transition: all 1s;
+    }
+  }
+
+  .imageclippath::after {
+    content: "";
+    position: absolute;
+    border-radius: 20px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    background: #37420f;
+    clip-path: polygon(
+      0% 8%,
+      7% 18%,
+      0% 15%,
+      0% 83%,
+      12% 80%,
+      0% 93%,
+      0% 100%,
+      100% 100%,
+      92% 92%,
+      100% 93%,
+      100% 0%,
+      0% 0%,
+      0% 8%
+    );
+  }
+
+  .bannerbg {
+    width: 100%;
+    height: 25rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+  }
+
+  .bannerbg::before {
+    content: "";
+    position: absolute;
+    border-radius: 20px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #6c7f24;
+
+    clip-path: polygon(
+      0% 10%,
+      2% 20%,
+      0% 18%,
+      0% 83%,
+      5% 82%,
+      0% 90%,
+      0% 100%,
+      100% 100%,
+      96% 94%,
+      100% 94%,
+      100% 0%,
+      0% 0%,
+      0% 8%
+    );
+  }
+
+  .bannerbg::after {
+    content: "";
+    position: absolute;
+    border-radius: 20px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #37420f;
+
+    clip-path: polygon(
+      0% 10%,
+      3% 18%,
+      0% 18%,
+      0% 80%,
+      7% 80%,
+      0% 93%,
+      0% 92%,
+      100% 100%,
+      96% 90%,
+      100% 94%,
+      100% 0%,
+      0% 0%,
+      0% 0%
+    );
+  }
+
+  .meetImg {
+    width: 22rem;
+    height: 25rem;
+    position: relative;
+    transition: width 300ms;
+  }
+
+  .meetImg.first {
+    transform: rotate(3deg);
+  }
+
+  .meetImg.second {
+    transform: rotate(-3deg);
+  }
+
+  .meetImg.third {
+    transform: rotate(3deg);
+  }
+
+  .meetImg:hover {
+    width: 40rem;
+  }
+
+  .meetImg:hover img {
+    transform: rotate(0);
+    width: 40%;
+    height: calc(100% - 1rem);
+    transform: translateY(0);
+    top: 0;
+  }
+
+  .meetImg:hover .bottomText {
+    display: none;
+  }
+
+  .meetImg:hover .detailText {
+    display: flex;
+  }
+
+  .meetImg.first:hover,
+  .meetImg.second:hover,
+  .meetImg.third:hover {
+    transform: rotate(0deg);
+  }
+
+  .meetImg::before {
+    content: "";
+    position: absolute;
+    border-radius: 20px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #6c7f24;
+    clip-path: polygon(
+      0% 12%,
+      7% 20%,
+      0% 15%,
+      0% 85%,
+      8% 82%,
+      0% 90%,
+      0% 100%,
+      100% 100%,
+      96% 94%,
+      100% 94%,
+      100% 0%,
+      0% 0%,
+      0% 8%
+    );
+  }
+
+  .meetImg::after {
+    content: "";
+    position: absolute;
+    border-radius: 20px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #37420f;
+    clip-path: polygon(
+      0% 8%,
+      7% 18%,
+      0% 15%,
+      0% 83%,
+      12% 80%,
+      0% 93%,
+      0% 100%,
+      100% 100%,
+      92% 92%,
+      100% 93%,
+      100% 0%,
+      0% 0%,
+      0% 8%
+    );
+  }
+
+  .banner-wrapper .bannerbg {
+    transform: scale(1);
+    transition: transform 300ms cubic-bezier(0.03, 0.6, 0.17, 0.91);
+  }
+
+  .banner-wrapper:hover .bannerbg {
+    transform: scale(0.8);
+    transition: transform 300ms cubic-bezier(0.03, 0.6, 0.17, 0.91);
+  }
+
+  .banner-wrapper:hover .banner-fruits span:nth-child(1) {
+    transform: translate(-10rem, -13rem);
+    transition: transform 300ms 50ms;
+  }
+
+  .banner-wrapper:hover .banner-fruits span:nth-child(2) {
+    transform: translate(-3rem, -15rem);
+    transition: transform 300ms 100ms;
+  }
+
+  .banner-wrapper:hover .banner-fruits span:nth-child(3) {
+    transform: translate(2rem, -15rem);
+    transition: transform 300ms 150ms;
+  }
+
+  .banner-wrapper:hover .banner-fruits span:nth-child(4) {
+    transform: translate(6rem, -15rem);
+    transition: transform 300ms 200ms;
+  }
+
+  .banner-wrapper:hover .banner-fruits span:nth-child(5) {
+    transform: translate(9rem, -15rem);
+    transition: transform 300ms 250ms;
+  }
+
+  .banner-wrapper:hover .banner-fruits span:nth-child(6) {
+    transform: translate(14rem, -17rem) rotate(15deg);
+    transition: transform 300ms 300ms;
+  }
+
+  .banner-wrapper:hover .banner-fruits span:nth-child(7) {
+    transform: translate(18rem, -14rem) rotate(15deg);
+    transition: transform 300ms 350ms;
+  }
+
+  .banner-wrapper .banner-fruits span:nth-child(1),
+  .banner-wrapper .banner-fruits span:nth-child(2),
+  .banner-wrapper .banner-fruits span:nth-child(3),
+  .banner-wrapper .banner-fruits span:nth-child(4),
+  .banner-wrapper .banner-fruits span:nth-child(5),
+  .banner-wrapper .banner-fruits span:nth-child(6),
+  .banner-wrapper .banner-fruits span:nth-child(7) {
+    transform: translate(0, 0);
+    transition: transform 300ms calc(var(--c) * 50ms);
+  }
+
+  .upcomingevts {
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+  }
+
+  .upcomingevts::before {
+    content: "";
+    position: absolute;
+    border-radius: 20px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #6c7f24;
+    clip-path: polygon(
+      0% 10%,
+      2% 10%,
+      0% 15%,
+      0% 86%,
+      1.5% 89%,
+      0% 91%,
+      0% 100%,
+      100% 100%,
+      100% 90%,
+      98% 85%,
+      100% 80%,
+      100% 0%,
+      0% 0%,
+      0% 8%
+    );
+  }
+
+  .upcomingevts::after {
+    content: "";
+    position: absolute;
+    border-radius: 20px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #37420f;
+
+    clip-path: polygon(
+      0% 10%,
+      1.5% 14%,
+      0% 18%,
+      0% 84%,
+      2% 89%,
+      0% 93%,
+      0% 92%,
+      0% 100%,
+      100% 100%,
+      100% 92%,
+      97% 85%,
+      100% 78%,
+      100% 0%,
+      0% 0%,
+      0% 0%
+    );
+  }
+  /* details {
+    padding: 1rem 0;
+  } */
+
+  @supports selector(::details-content) {
+    .warning {
+      display: none;
+    }
+  }
+
+  /* Animate all properties on details. This because we change the margin, border, etc when open. */
+  details {
+    transition: all 0.5s ease;
+    background: #6c7f24;
+    color: #f1e8d6;
+  }
+
+  /* Add gap around open details */
+  details[open]:not(:first-child) {
+    margin-top: 1rem;
+  }
+  details[open]:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  /* Add border to all details, but prevent a 2px-looking one when two successive details are collapsed */
+  details {
+    z-index: 99999;
+    border-radius: 20px;
+  }
+  details:not([open]):has(+ details:not(details[open])) {
+    border-bottom-color: #fff;
+  }
+
+  /* Animate all on summmary */
+  summary {
+    transition: all 0.5s ease;
+    padding: 1em 1em;
+  }
+  [open] summary {
+    padding: 1em 1em;
+  }
+
+  summary {
+    color: #f1e8d6;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 18px;
+
+    /* Roll our own marker */
+    display: flex;
+    justify-content: space-between;
+
+    &::marker {
+      content: "";
+    }
+    &::after {
+      content: "";
+      background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgYmFzZVByb2ZpbGU9InRpbnkiIGhlaWdodD0iMjRweCIgaWQ9IkxheWVyXzEiIHZlcnNpb249IjEuMiIgdmlld0JveD0iMCAwIDI0IDI0IiB3aWR0aD0iMjRweCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+PHBhdGggZD0iTTguNTg2LDUuNTg2Yy0wLjc4MSwwLjc4MS0wLjc4MSwyLjA0NywwLDIuODI4TDEyLjE3MSwxMmwtMy41ODUsMy41ODZjLTAuNzgxLDAuNzgxLTAuNzgxLDIuMDQ3LDAsMi44MjggIEM4Ljk3NiwxOC44MDUsOS40ODgsMTksMTAsMTlzMS4wMjQtMC4xOTUsMS40MTQtMC41ODZMMTcuODI5LDEybC02LjQxNS02LjQxNEMxMC42MzQsNC44MDUsOS4zNjYsNC44MDUsOC41ODYsNS41ODZ6Ii8+PC9zdmc+);
+      background-size: cover;
+      width: 1.25rem;
+
+      aspect-ratio: 1;
+      display: block;
+      transform: rotate(90deg);
+      transition: transform 0.5s ease;
+      transform-origin: 50% 50%;
+    }
+    [open] &::after {
+      transform: rotate(270deg);
+    }
+
+    /* Hover state */
+    &:hover {
+      color: #f1e8d6;
+      font-size: 600;
+    }
+  }
+
+  .details-content-wrapper {
+    padding: 0.5em 1em;
+
+    /* We need margin-trim … */
+    :first-child {
+      margin-top: 0;
+    }
+    :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  ::details-content {
+    transition:
+      all 0.5s ease,
+      content-visibility 0.5s allow-discrete;
+    height: 0;
+    overflow: clip;
+  }
+  @supports (interpolate-size: allow-keywords) {
+    :root {
+      interpolate-size: allow-keywords;
+    }
+
+    [open]::details-content {
+      height: auto;
+      padding-bottom: 0.5em;
+    }
+  }
+  @supports not (interpolate-size: allow-keywords) {
+    [open]::details-content {
+      height: 150px;
+      overflow-y: scroll;
+    }
+  }
+
+  .testimonial {
+    width: 35rem;
+    height: 48rem;
+    position: relative;
+  }
+
+  .testimonial::before {
+    content: "";
+    position: absolute;
+    border-radius: 20px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    background: #6c7f24;
+    clip-path: polygon(
+      0% 12%,
+      7% 20%,
+      0% 15%,
+      0% 85%,
+      8% 82%,
+      0% 90%,
+      0% 100%,
+      100% 100%,
+      96% 94%,
+      100% 94%,
+      100% 0%,
+      0% 0%,
+      0% 8%
+    );
+  }
+
+  .testimonial::after {
+    content: "";
+    position: absolute;
+    border-radius: 20px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    background: #37420f;
+    clip-path: polygon(
+      0% 8%,
+      7% 18%,
+      0% 15%,
+      0% 83%,
+      12% 80%,
+      0% 93%,
+      0% 100%,
+      100% 100%,
+      92% 92%,
+      100% 93%,
+      100% 0%,
+      0% 0%,
+      0% 8%
+    );
+  }
+
+  .testimonialscroll {
+    position: relative;
+    width: 50%;
+    height: 15rem;
+    z-index: 9999;
+  }
+
+  .testimonialscroll div {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #6c7f24;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: #37420f;
+    font-weight: bold;
+    border-radius: 10px;
+    opacity: 0;
+    transform: translateX(100%) rotate(-15deg);
+    transition: transform 300ms ease-in-out;
+    z-index: 9;
+  }
+
+  .testimonialscroll div.active {
+    opacity: 1;
+    transform: translateX(0) rotate(0);
+  }
+
+  .testimonialscroll div.prev {
+    opacity: 0;
+    transform: translateX(100%) rotate(0);
+  }
+
+  .testimonialcard {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  .testimonialscroll div::before {
+    content: "";
+    position: absolute;
+    top: -0.3rem;
+    left: -0.2rem;
+    width: 100%;
+    height: 100%;
+    background-color: #f1e8d6;
+    border-radius: 10px;
+    z-index: -1;
+  }
+
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 24 24"><path fill="%23bbbbbb" d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/></svg>');
+  }
+
+  @media screen and (max-width: 800px) {
+    .testimonial {
+      width: 100%;
+      height: 48rem;
+      position: relative;
+    }
+
+    @keyframes scalebanner {
+      from {
+        transform: scale(1);
+      }
+      to {
+        transform: scale(1);
+      }
+    }
+
+    @keyframes scroller {
+      from {
+        transform: translate(-180px, -10px) scale(0.6);
+      }
+
+      to {
+        transform: translate(-120px, 200px);
+      }
+    }
+
+    @keyframes scroller2 {
+      from {
+        transform: translate(130px, -90px) scale(0.7);
+      }
+
+      to {
+        transform: translate(60px, 120px);
+      }
+    }
+
+    @keyframes scroller3 {
+      from {
+        transform: translate(-170px, -60px) scale(0.6);
+      }
+
+      to {
+        transform: translate(-120px, 170px);
+      }
+    }
+
+    @keyframes scroller4 {
+      from {
+        transform: translate(60px, -30px) scale(0.6);
+      }
+
+      to {
+        transform: translate(30px, 150px);
+      }
+    }
+
+    @keyframes scroller5 {
+      from {
+        transform: translate(-170px, 10px) scale(0.6);
+      }
+
+      to {
+        transform: translate(-40px, 200px);
+      }
+    }
+
+    @keyframes scroller6 {
+      from {
+        transform: translate(80px, -10px) rotate(-30deg) scale(0.6);
+      }
+
+      to {
+        transform: translate(40px, 170px) rotate(-60deg);
+      }
+    }
+
+    @keyframes scroller7 {
+      from {
+        transform: translate(-110px, 60px) scale(0.6);
+      }
+
+      to {
+        transform: translate(-50px, 150px);
+      }
+    }
+
+    @keyframes scroller8 {
+      from {
+        transform: translate(-80px, 70px) scale(-0.6, 0.6);
+      }
+
+      to {
+        transform: translate(-70px, 100px) scale(-1, 1) rotate(15deg);
+      }
+    }
+
+    .meetImg {
+      width: 100%;
+      height: 25rem;
+      position: relative;
+      transition: width 300ms;
+    }
+
+    .meetImg.first {
+      transform: rotate(0deg);
+    }
+
+    .meetImg.second {
+      transform: rotate(0deg);
+    }
+
+    .meetImg.third {
+      transform: rotate(0deg);
+    }
+
+    .meetImg:hover img {
+      transform: rotate(0);
+      width: 40%;
+      height: calc(100% - 1rem);
+      transform: translateY(0);
+      top: 0;
+    }
+
+    .testimonial {
+      width: 100%;
+      height: 47rem;
+      position: relative;
+    }
+  }
+</style>
+
+<script>
+  const details = document.querySelectorAll("details");
+
+  const photos = document.querySelectorAll(".photo") as NodeListOf<HTMLSpanElement>;
+
+  let interval: number;
+
+  details.forEach((detail, idx) => {
+    detail.addEventListener("click", () => {
+      photos.forEach((photo) => (photo.style.display = "none"));
+
+      if (photos[idx]) {
+        photos[idx].style.display = "flex";
+      }
+    });
+  });
+
+  let index = 0;
+  const slides = document.querySelectorAll(".testimonialscroll div");
+
+  function showNextSlide() {
+    slides[index].classList.remove("active");
+    slides[index].classList.add("prev");
+
+    index = (index + 1) % slides.length;
+
+    slides[index].classList.remove("prev");
+    slides[index].classList.add("active");
+  }
+
+  function startCarousel() {
+    interval = setInterval(showNextSlide, 5000);
+  }
+
+  function stopCarousel() {
+    clearInterval(interval);
+  }
+
+  // Start the carousel when the page loads
+  startCarousel();
+
+  // Stop the interval when the page is unloaded (prevents memory leaks)
+  window.addEventListener("beforeunload", stopCarousel);
+
+  // OPTIONAL: Pause when hovering over the carousel
+  document.getElementById("carousel")?.addEventListener("mouseenter", stopCarousel);
+  document.getElementById("carousel")?.addEventListener("mouseleave", startCarousel);
+</script>
