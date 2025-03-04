@@ -32,6 +32,11 @@ import Github from "../../public/imgsvg/github.astro";
 import Linkedin from "../../public/imgsvg/linkedin.astro";
 import X from "../../public/imgsvg/x.astro";
 import Globe from "../../public/imgsvg/globe.astro";
+import woodenname from "../../public/imgsvg/woodenname.svg";
+import farmlogo from "../../public/imgsvg/farmlogo.svg";
+import farmlogo1 from "../../public/imgsvg/farmlogo1.svg";
+import farmlogo2 from "../../public/imgsvg/farmlogo2.svg";
+import farmlog3 from "../../public/imgsvg/farmlogo3.svg";
 
 const sandbrown = "#f1e8d6";
 const primarygreen = "#37420f";
@@ -46,6 +51,14 @@ const secondarygreen = "#6c7f24";
     <div
       class="md:text-[5rem] text-[3rem] leading-none flex flex-col text-center justify-center w-full items-center mt-28 relative h-full herowrapper overflow-clip"
     >
+      <div class="relative flex justify-center items-center mb-6 woodenplate">
+        <p class="text-sm font-bold absolute top-[30%] text-[#734517]">
+          All products are locally grown
+        </p>
+        <span class="">
+          <Image src={woodenname} height={300} width={250} alt={"pear svg"} />
+        </span>
+      </div>
       <div class="md:w-[35rem] relative z-10 hero-fruits">
         <span
           class="absolute md:top-[50%] md:left-[50%] [transform:translate(-10rem,10rem)]"
@@ -88,25 +101,94 @@ const secondarygreen = "#6c7f24";
     </div>
 
     <!-- sponsors -->
-    <section>
-      <!-- <div class="w-full flex justify-end">
-        <svg
-          width="1070"
-          height="46"
-          viewBox="0 0 1070 46"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            id="arc"
-            d="M0.5 41.0001C93.3333 27.1668 315.1 -0.19988 459.5 1.00012C603.9 2.20012 926 30.8334 1069 45"
-            stroke="black"></path>
-          <text font-size="16" fill="black">
-            <textPath xlink:href="#arc" startOffset="10%">Heelo how are you doing</textPath>
-          </text>
-        </svg>
-      </div> -->
 
+    <section class="overflow-clip sponsors">
+      <svg
+        viewBox="0 0 1220 100"
+        class="z-[99999] [transform:translateX(0px)]"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <defs>
+          <!-- <filter id="grayscaleFilter">
+            <feColorMatrix
+              type="matrix"
+              values="0.3333 0.3333 0.3333 0 0
+                    0.3333 0.3333 0.3333 0 0
+                    0.3333 0.3333 0.3333 0 0
+                    0 0 0 1 0"
+              result="grayscale"></feColorMatrix>
+
+            <feBlend mode="softlight" in="grayscale" in2="floodColor" result="blendedGrayscale"
+            ></feBlend>
+            <feBlend mode="normal" in="blendedGrayscale" in2="SourceGraphic"></feBlend>
+          </filter> -->
+        </defs>
+        <path
+          id="arcPath"
+          d="M 10 50 A 612 100 0 0 1 1220 200"
+          stroke="#c4c4c4"
+          stroke-width="1"
+          fill="none"></path>
+
+        <text style="filter: grayscale(100%) opacity(.4);">
+          <textPath xlink:href="
+          #arcPath" startOffset="0%" y="-200">
+            RECOGNIZED AND ENDORSED BY
+          </textPath>
+        </text>
+        <image
+          href="../../imgsvg/farmlogo.svg"
+          x="200"
+          y="20"
+          transform="rotate(-5,105,120)"
+          width="80"
+          height="80"
+          style="filter: grayscale(100%) opacity(.4);"
+        />
+
+        <image
+          href="../../imgsvg/farmlogo1.svg"
+          x="400"
+          y="20"
+          transform="rotate(-1,105,100)"
+          width="100"
+          height="60"
+          style="filter: grayscale(100%) opacity(.4); mix-blend-mode: multiply;"
+        />
+
+        <image
+          href="../../imgsvg/farmlogo2.svg"
+          x="600"
+          y="20"
+          transform="rotate(-1,105,100)"
+          width="100"
+          height="60"
+          style="filter: grayscale(100%) opacity(.4);"
+        />
+
+        <image
+          href="../../imgsvg/farmlogo3.svg"
+          x="800"
+          y="-30"
+          transform="rotate(3,-5,100)"
+          width="100"
+          height="60"
+          style="filter: grayscale(100%) opacity(.4);"
+        />
+
+        <image
+          href="../../imgsvg/farmlogo4.svg"
+          x="1000"
+          y="-60"
+          transform="rotate(5,5,100)"
+          width="100"
+          height="60"
+          style="filter: grayscale(100%) opacity(.4);"
+        />
+      </svg>
+    </section>
+
+    <section>
       <!-- who we are -->
       <section class="flex flex-col md:flex-row">
         <div class="md:w-1/2 flex flex-col gap-6 whoweare mx-6 md:mx-0">
@@ -177,18 +259,30 @@ const secondarygreen = "#6c7f24";
     </section>
 
     <!-- Meet our farmers -->
-    <section>
-      <div class="flex justify-center flex-col items-center gap-6">
-        <span class="">
-          <Image src={starspark} height={100} width={50} alt={"banana svg"} />
+    <section class="meetfarmers">
+      <div class="flex justify-center flex-col items-center gap-6 meetfarmers-star">
+        <span class="overflow-clip">
+          <Image
+            src={starspark}
+            height={100}
+            width={50}
+            alt={"star svg"}
+            class="[transform:translateY(0px)]"
+          />
         </span>
-        <h3 class="md:text-[4rem] text-[2rem] leading-none mb-20">Meet Our Farmers</h3>
+        <div class="overflow-clip mb-20">
+          <h3
+            class="md:text-[4rem] text-[2rem] leading-none meetfarmers-tag [transform:translateY(0px)]"
+          >
+            Meet Our Farmers
+          </h3>
+        </div>
       </div>
       <div
         class="flex mx-6 md:flex-row flex-col gap-16 meetfarmers md:overflow-x-scroll overflow-y-hidden"
       >
         <div>
-          <div class="meetImg first mt-12">
+          <div class="meetImg first mt-12 meetfarmers-img">
             <div class="flex overflow-hidden">
               <Image
                 src={africanfarmer}
@@ -229,7 +323,7 @@ const secondarygreen = "#6c7f24";
           </div>
         </div>
         <div>
-          <div class="meetImg second mt-12">
+          <div class="meetImg second mt-12 meetfarmers-img">
             <div class="flex overflow-hidden">
               <Image
                 src={femalefarmer}
@@ -266,7 +360,7 @@ const secondarygreen = "#6c7f24";
           </div>
         </div>
         <div>
-          <div class="meetImg third mt-12">
+          <div class="meetImg third mt-12 meetfarmers-img">
             <div class="flex overflow-hidden">
               <Image
                 src={southfarmer}
@@ -307,7 +401,15 @@ const secondarygreen = "#6c7f24";
 
     <!-- animated banner -->
     <section class="relative banner-wrapper">
-      <div class="bannerbg flex justify-center items-center z-10">
+      <div class="bannerbg flex flex-col justify-center items-center z-10">
+        <div class="relative flex justify-center items-center mb-6 woodenplatebanner">
+          <p class="text-sm font-bold absolute top-[30%] text-[#734517]">
+            All products are locally grown
+          </p>
+          <span class="">
+            <Image src={woodenname} height={300} width={250} alt={"pear svg"} />
+          </span>
+        </div>
         <span class="absolute -bottom-24 -left-24 z-30">
           <Image src={star6} height={100} width={300} alt="star shape" class="flex object-cover" />
         </span>
@@ -634,7 +736,7 @@ const secondarygreen = "#6c7f24";
 
     <!-- a market for the community -->
     <section class="">
-      <div class="upcomingevts flex justify-center items-center md:p-24 p-18">
+      <div class="upcomingevts flex justify-center items-center md:p-24 p-18 marketscale">
         <span class="absolute -bottom-24 -left-24 z-30">
           <Image src={star6} height={100} width={300} alt="star shape" class="flex object-cover" />
         </span>
@@ -653,7 +755,7 @@ const secondarygreen = "#6c7f24";
         <div class="md:w-2/5 flex flex-col gap-6">
           <div class="flex gap-2 items-center">
             <span><Logo /></span>
-            <div class="leading-none tracking-wide text-[#707070]">
+            <div class="leading-none tracking-wide">
               <h2>Sunshine</h2>
               <h2>Harvest</h2>
               <h2>Market</h2>
@@ -748,1012 +850,559 @@ const secondarygreen = "#6c7f24";
       </div>
     </footer>
   </section>
-</div>
 
-<style>
-  h1,
-  h2,
-  h3,
-  h4 {
-    font-family: "Gasoek One", serif;
-  }
-
-  @font-face {
-    font-family: "Gasoek One", serif;
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: "Host Grotesk", serif;
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-  }
-
-  .readmore span {
-    /* display: none; */
-    width: -1;
-    height: -1;
-    transition: all 300ms;
-  }
-
-  .readmore:hover span {
-    /* display: flex; */
-    width: 0.75rem;
-    height: 0.75rem;
-    transition: all 300ms;
-  }
-
-  .imageclippath {
-    width: 25rem;
-    height: 30rem;
-    position: relative;
-  }
-
-  .imageclippath::before {
-    content: "";
-    position: absolute;
-    border-radius: 20px;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 90%;
-    background: #6c7f24;
-
-    clip-path: polygon(
-      0% 12%,
-      7% 20%,
-      0% 15%,
-      0% 85%,
-      8% 82%,
-      0% 90%,
-      0% 100%,
-      100% 100%,
-      96% 94%,
-      100% 94%,
-      100% 0%,
-      0% 0%,
-      0% 8%
-    );
-  }
-
-  @supports not (animation-timeline: scroll()) {
-    .hero-fruits span:nth-child(1) {
-      transform: translate(-280px, -150px);
+  <style>
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: "Gasoek One", serif;
     }
 
-    .hero-fruits span:nth-child(2) {
-      transform: translate(180px, -130px);
+    @font-face {
+      font-family: "Gasoek One", serif;
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
     }
 
-    .hero-fruits span:nth-child(3) {
-      transform: translate(-260px, -70px);
+    @font-face {
+      font-family: "Host Grotesk", serif;
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
     }
 
-    .hero-fruits span:nth-child(4) {
-      transform: translate(130px, -30px);
+    .woodenplate {
+      animation: woodenfallout 300ms 1s
+        linear(
+          0,
+          0.002,
+          0.009 1%,
+          0.035,
+          0.078,
+          0.141 4.4%,
+          0.281 6.7%,
+          0.723 12.9%,
+          0.938 16.7%,
+          1.017,
+          1.077,
+          1.121,
+          1.149 24.3%,
+          1.159,
+          1.163,
+          1.161,
+          1.154 29.9%,
+          1.129 32.8%,
+          1.051 39.6%,
+          1.017 43.1%,
+          0.991,
+          0.977 51%,
+          0.974 53.8%,
+          0.975 57.1%,
+          0.997 69.8%,
+          1.003 76.9%,
+          1.004 83.8%,
+          1
+        )
+        forwards;
+      z-index: 99;
     }
 
-    .hero-fruits span:nth-child(5) {
-      transform: translate(-250px, 20px);
+    .woodenplatebanner {
+      z-index: 99;
     }
 
-    .hero-fruits span:nth-child(6) {
-      transform: translate(180px, -10px) rotate(-30deg);
+    .bannerbg:hover .woodenplatebanner {
+      animation: woodenfallout 300ms 1s
+        linear(
+          0,
+          0.002,
+          0.009 1%,
+          0.035,
+          0.078,
+          0.141 4.4%,
+          0.281 6.7%,
+          0.723 12.9%,
+          0.938 16.7%,
+          1.017,
+          1.077,
+          1.121,
+          1.149 24.3%,
+          1.159,
+          1.163,
+          1.161,
+          1.154 29.9%,
+          1.129 32.8%,
+          1.051 39.6%,
+          1.017 43.1%,
+          0.991,
+          0.977 51%,
+          0.974 53.8%,
+          0.975 57.1%,
+          0.997 69.8%,
+          1.003 76.9%,
+          1.004 83.8%,
+          1
+        )
+        forwards;
+      z-index: 99;
     }
 
-    .hero-fruits span:nth-child(7) {
-      transform: translate(-160px, 120px);
-    }
-
-    .hero-fruits span:nth-child(8) {
-      transform: translate(-80px, 130px) scale(-1, 1);
-    }
-
-    .tray span {
-      transform: translateY(100%);
-    }
-  }
-
-  @supports (animation-timeline: scroll()) {
-    html {
-      scroll-timeline: --scrollwell y;
-    }
-
-    .herowrapper {
-      /* overflow-y: scroll; */
-    }
-
-    .hero-fruits span {
-      transition: all 1s;
-      transform: scale(1);
-      animation: scrollTo 1s calc(var(--a) * 100ms) linear forwards;
-      /* animation-timeline: --scrollwell;
-    animation-range: 0vh 90vh; */
-    }
-
-    .hero-fruits span:nth-child(1) {
-      animation: scroller auto both;
-    }
-
-    .hero-fruits span:nth-child(2) {
-      animation: scroller2 auto both;
-    }
-
-    .hero-fruits span:nth-child(3) {
-      animation: scroller3 auto both;
-    }
-
-    .hero-fruits span:nth-child(4) {
-      animation: scroller4 auto both;
-    }
-
-    .hero-fruits span:nth-child(5) {
-      animation: scroller5 auto both;
-    }
-
-    .hero-fruits span:nth-child(6) {
-      animation: scroller6 auto both;
-    }
-
-    .hero-fruits span:nth-child(7) {
-      animation: scroller7 auto both;
-    }
-
-    .hero-fruits span:nth-child(8) {
-      animation: scroller8 auto both;
-    }
-
-    .tray span {
-      animation: scroller9 auto both;
-    }
-
-    .whoweare-img {
-      animation: revealimage auto both;
-    }
-
-    .whoweare > .tag > p,
-    .whoweare span img,
-    .whoweare > .title > h3,
-    .whoweare-text > p {
-      animation: revealtext auto both;
-    }
-
-    .whoweare > .tag > p,
-    .whoweare span img,
-    .whoweare > .title > h3,
-    .whoweare-text > p,
-    .whoweare-img {
-      animation-timeline: --scrollwell;
-      animation-range: 20vh 100vh;
-    }
-
-    .banner-section {
-      animation: scalebanner auto linear;
-      animation-timeline: --scrollwell;
-      animation-range: 60vh 150vh;
-    }
-
-    @keyframes scroller {
+    @keyframes woodenfallout {
       from {
-        transform: translate(-280px, -150px);
-      }
-
-      to {
-        transform: translate(-120px, 200px);
-      }
-    }
-
-    @keyframes scroller2 {
-      from {
-        transform: translate(180px, -130px);
-      }
-
-      to {
-        transform: translate(60px, 200px);
-      }
-    }
-
-    @keyframes scroller3 {
-      from {
-        transform: translate(-260px, -70px);
-      }
-
-      to {
-        transform: translate(-100px, 250px);
-      }
-    }
-
-    @keyframes scroller4 {
-      from {
-        transform: translate(130px, -30px);
-      }
-
-      to {
-        transform: translate(30px, 230px);
-      }
-    }
-
-    @keyframes scroller5 {
-      from {
-        transform: translate(-250px, 20px);
-      }
-
-      to {
-        transform: translate(-30px, 270px);
-      }
-    }
-
-    @keyframes scroller6 {
-      from {
-        transform: translate(180px, -10px) rotate(-30deg);
-      }
-
-      to {
-        transform: translate(30px, 230px) rotate(-60deg);
-      }
-    }
-
-    @keyframes scroller7 {
-      from {
-        transform: translate(-160px, 120px);
-      }
-
-      to {
-        transform: translate(-50px, 220px);
-      }
-    }
-
-    @keyframes scroller8 {
-      from {
-        transform: translate(-80px, 130px) scale(-1, 1);
-      }
-
-      to {
-        transform: translate(-80px, 170px) scale(-1, 1) rotate(15deg);
-      }
-    }
-
-    @keyframes scroller9 {
-      from {
-        transform: translateY(100%);
-      }
-    }
-
-    @keyframes revealtext {
-      from {
-        transform: translateY(100%);
-      }
-    }
-
-    @keyframes revealimage {
-      from {
-        clip-path: inset(0% 60% 0% 53%);
+        transform-origin: top left;
       }
       to {
-        clip-path: inset(-15% 0% 0% 0%);
+        transform: rotate(10deg);
+        transform-origin: top left;
       }
     }
 
-    @keyframes scalebanner {
-      from {
-        transform: scale(1.3);
-      }
-      to {
-        transform: scale(1);
-      }
+    .readmore span {
+      /* display: none; */
+      width: -1;
+      height: -1;
+      transition: all 300ms;
     }
 
-    .hero-fruits span:nth-child(1),
-    .hero-fruits span:nth-child(2),
-    .hero-fruits span:nth-child(3),
-    .hero-fruits span:nth-child(4),
-    .hero-fruits span:nth-child(5),
-    .hero-fruits span:nth-child(6),
-    .hero-fruits span:nth-child(7),
-    .hero-fruits span:nth-child(8),
-    .tray span {
-      animation-timeline: --scrollwell;
-      animation-range: 0vh 25vh;
+    .readmore:hover span {
+      /* display: flex; */
+      width: 0.75rem;
+      height: 0.75rem;
+      transition: all 300ms;
     }
 
-    @keyframes scrollTo {
-      from {
-        position: absolute;
-        top: 50%;
-        left: 40%;
-        right: 50%;
-        bottom: 50%;
-
-        transform: scale(0.2);
-        transition: all 1s;
-      }
-    }
-  }
-
-  .imageclippath::after {
-    content: "";
-    position: absolute;
-    border-radius: 20px;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 90%;
-    background: #37420f;
-    clip-path: polygon(
-      0% 8%,
-      7% 18%,
-      0% 15%,
-      0% 83%,
-      12% 80%,
-      0% 93%,
-      0% 100%,
-      100% 100%,
-      92% 92%,
-      100% 93%,
-      100% 0%,
-      0% 0%,
-      0% 8%
-    );
-  }
-
-  .bannerbg {
-    width: 100%;
-    height: 25rem;
-    position: relative;
-    overflow: hidden;
-    border-radius: 20px;
-  }
-
-  .bannerbg::before {
-    content: "";
-    position: absolute;
-    border-radius: 20px;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #6c7f24;
-
-    clip-path: polygon(
-      0% 10%,
-      2% 20%,
-      0% 18%,
-      0% 83%,
-      5% 82%,
-      0% 90%,
-      0% 100%,
-      100% 100%,
-      96% 94%,
-      100% 94%,
-      100% 0%,
-      0% 0%,
-      0% 8%
-    );
-  }
-
-  .bannerbg::after {
-    content: "";
-    position: absolute;
-    border-radius: 20px;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #37420f;
-
-    clip-path: polygon(
-      0% 10%,
-      3% 18%,
-      0% 18%,
-      0% 80%,
-      7% 80%,
-      0% 93%,
-      0% 92%,
-      100% 100%,
-      96% 90%,
-      100% 94%,
-      100% 0%,
-      0% 0%,
-      0% 0%
-    );
-  }
-
-  .meetImg {
-    width: 22rem;
-    height: 25rem;
-    position: relative;
-    transition: width 300ms;
-  }
-
-  .meetImg.first {
-    transform: rotate(3deg);
-  }
-
-  .meetImg.second {
-    transform: rotate(-3deg);
-  }
-
-  .meetImg.third {
-    transform: rotate(3deg);
-  }
-
-  .meetImg:hover {
-    width: 40rem;
-  }
-
-  .meetImg:hover img {
-    transform: rotate(0);
-    width: 40%;
-    height: calc(100% - 1rem);
-    transform: translateY(0);
-    top: 0;
-  }
-
-  .meetImg:hover .bottomText {
-    display: none;
-  }
-
-  .meetImg:hover .detailText {
-    display: flex;
-  }
-
-  .meetImg.first:hover,
-  .meetImg.second:hover,
-  .meetImg.third:hover {
-    transform: rotate(0deg);
-  }
-
-  .meetImg::before {
-    content: "";
-    position: absolute;
-    border-radius: 20px;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #6c7f24;
-    clip-path: polygon(
-      0% 12%,
-      7% 20%,
-      0% 15%,
-      0% 85%,
-      8% 82%,
-      0% 90%,
-      0% 100%,
-      100% 100%,
-      96% 94%,
-      100% 94%,
-      100% 0%,
-      0% 0%,
-      0% 8%
-    );
-  }
-
-  .meetImg::after {
-    content: "";
-    position: absolute;
-    border-radius: 20px;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #37420f;
-    clip-path: polygon(
-      0% 8%,
-      7% 18%,
-      0% 15%,
-      0% 83%,
-      12% 80%,
-      0% 93%,
-      0% 100%,
-      100% 100%,
-      92% 92%,
-      100% 93%,
-      100% 0%,
-      0% 0%,
-      0% 8%
-    );
-  }
-
-  .banner-wrapper .bannerbg {
-    transform: scale(1);
-    transition: transform 300ms cubic-bezier(0.03, 0.6, 0.17, 0.91);
-  }
-
-  .banner-wrapper:hover .bannerbg {
-    transform: scale(0.8);
-    transition: transform 300ms cubic-bezier(0.03, 0.6, 0.17, 0.91);
-  }
-
-  .banner-wrapper:hover .banner-fruits span:nth-child(1) {
-    transform: translate(-10rem, -13rem);
-    transition: transform 300ms 50ms;
-  }
-
-  .banner-wrapper:hover .banner-fruits span:nth-child(2) {
-    transform: translate(-3rem, -15rem);
-    transition: transform 300ms 100ms;
-  }
-
-  .banner-wrapper:hover .banner-fruits span:nth-child(3) {
-    transform: translate(2rem, -15rem);
-    transition: transform 300ms 150ms;
-  }
-
-  .banner-wrapper:hover .banner-fruits span:nth-child(4) {
-    transform: translate(6rem, -15rem);
-    transition: transform 300ms 200ms;
-  }
-
-  .banner-wrapper:hover .banner-fruits span:nth-child(5) {
-    transform: translate(9rem, -15rem);
-    transition: transform 300ms 250ms;
-  }
-
-  .banner-wrapper:hover .banner-fruits span:nth-child(6) {
-    transform: translate(14rem, -17rem) rotate(15deg);
-    transition: transform 300ms 300ms;
-  }
-
-  .banner-wrapper:hover .banner-fruits span:nth-child(7) {
-    transform: translate(18rem, -14rem) rotate(15deg);
-    transition: transform 300ms 350ms;
-  }
-
-  .banner-wrapper .banner-fruits span:nth-child(1),
-  .banner-wrapper .banner-fruits span:nth-child(2),
-  .banner-wrapper .banner-fruits span:nth-child(3),
-  .banner-wrapper .banner-fruits span:nth-child(4),
-  .banner-wrapper .banner-fruits span:nth-child(5),
-  .banner-wrapper .banner-fruits span:nth-child(6),
-  .banner-wrapper .banner-fruits span:nth-child(7) {
-    transform: translate(0, 0);
-    transition: transform 300ms calc(var(--c) * 50ms);
-  }
-
-  .upcomingevts {
-    width: 100%;
-    height: auto;
-    position: relative;
-    overflow: hidden;
-    border-radius: 20px;
-  }
-
-  .upcomingevts::before {
-    content: "";
-    position: absolute;
-    border-radius: 20px;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #6c7f24;
-    clip-path: polygon(
-      0% 10%,
-      2% 10%,
-      0% 15%,
-      0% 86%,
-      1.5% 89%,
-      0% 91%,
-      0% 100%,
-      100% 100%,
-      100% 90%,
-      98% 85%,
-      100% 80%,
-      100% 0%,
-      0% 0%,
-      0% 8%
-    );
-  }
-
-  .upcomingevts::after {
-    content: "";
-    position: absolute;
-    border-radius: 20px;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #37420f;
-
-    clip-path: polygon(
-      0% 10%,
-      1.5% 14%,
-      0% 18%,
-      0% 84%,
-      2% 89%,
-      0% 93%,
-      0% 92%,
-      0% 100%,
-      100% 100%,
-      100% 92%,
-      97% 85%,
-      100% 78%,
-      100% 0%,
-      0% 0%,
-      0% 0%
-    );
-  }
-  /* details {
-    padding: 1rem 0;
-  } */
-
-  @supports selector(::details-content) {
-    .warning {
-      display: none;
-    }
-  }
-
-  /* Animate all properties on details. This because we change the margin, border, etc when open. */
-  details {
-    transition: all 0.5s ease;
-    background: #6c7f24;
-    color: #f1e8d6;
-  }
-
-  /* Add gap around open details */
-  details[open]:not(:first-child) {
-    margin-top: 1rem;
-  }
-  details[open]:not(:last-child) {
-    margin-bottom: 1rem;
-  }
-
-  /* Add border to all details, but prevent a 2px-looking one when two successive details are collapsed */
-  details {
-    z-index: 99999;
-    border-radius: 20px;
-  }
-  details:not([open]):has(+ details:not(details[open])) {
-    border-bottom-color: #fff;
-  }
-
-  /* Animate all on summmary */
-  summary {
-    transition: all 0.5s ease;
-    padding: 1em 1em;
-  }
-  [open] summary {
-    padding: 1em 1em;
-  }
-
-  summary {
-    color: #f1e8d6;
-    cursor: pointer;
-    font-weight: 600;
-    font-size: 18px;
-
-    /* Roll our own marker */
-    display: flex;
-    justify-content: space-between;
-
-    &::marker {
-      content: "";
-    }
-    &::after {
-      content: "";
-      background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgYmFzZVByb2ZpbGU9InRpbnkiIGhlaWdodD0iMjRweCIgaWQ9IkxheWVyXzEiIHZlcnNpb249IjEuMiIgdmlld0JveD0iMCAwIDI0IDI0IiB3aWR0aD0iMjRweCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+PHBhdGggZD0iTTguNTg2LDUuNTg2Yy0wLjc4MSwwLjc4MS0wLjc4MSwyLjA0NywwLDIuODI4TDEyLjE3MSwxMmwtMy41ODUsMy41ODZjLTAuNzgxLDAuNzgxLTAuNzgxLDIuMDQ3LDAsMi44MjggIEM4Ljk3NiwxOC44MDUsOS40ODgsMTksMTAsMTlzMS4wMjQtMC4xOTUsMS40MTQtMC41ODZMMTcuODI5LDEybC02LjQxNS02LjQxNEMxMC42MzQsNC44MDUsOS4zNjYsNC44MDUsOC41ODYsNS41ODZ6Ii8+PC9zdmc+);
-      background-size: cover;
-      width: 1.25rem;
-
-      aspect-ratio: 1;
-      display: block;
-      transform: rotate(90deg);
-      transition: transform 0.5s ease;
-      transform-origin: 50% 50%;
-    }
-    [open] &::after {
-      transform: rotate(270deg);
-    }
-
-    /* Hover state */
-    &:hover {
-      color: #f1e8d6;
-      font-size: 600;
-    }
-  }
-
-  .details-content-wrapper {
-    padding: 0.5em 1em;
-
-    /* We need margin-trim … */
-    :first-child {
-      margin-top: 0;
-    }
-    :last-child {
-      margin-bottom: 0;
-    }
-  }
-
-  ::details-content {
-    transition:
-      all 0.5s ease,
-      content-visibility 0.5s allow-discrete;
-    height: 0;
-    overflow: clip;
-  }
-  @supports (interpolate-size: allow-keywords) {
-    :root {
-      interpolate-size: allow-keywords;
-    }
-
-    [open]::details-content {
-      height: auto;
-      padding-bottom: 0.5em;
-    }
-  }
-  @supports not (interpolate-size: allow-keywords) {
-    [open]::details-content {
-      height: 150px;
-      overflow-y: scroll;
-    }
-  }
-
-  .testimonial {
-    width: 35rem;
-    height: 48rem;
-    position: relative;
-  }
-
-  .testimonial::before {
-    content: "";
-    position: absolute;
-    border-radius: 20px;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 90%;
-    background: #6c7f24;
-    clip-path: polygon(
-      0% 12%,
-      7% 20%,
-      0% 15%,
-      0% 85%,
-      8% 82%,
-      0% 90%,
-      0% 100%,
-      100% 100%,
-      96% 94%,
-      100% 94%,
-      100% 0%,
-      0% 0%,
-      0% 8%
-    );
-  }
-
-  .testimonial::after {
-    content: "";
-    position: absolute;
-    border-radius: 20px;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 90%;
-    background: #37420f;
-    clip-path: polygon(
-      0% 8%,
-      7% 18%,
-      0% 15%,
-      0% 83%,
-      12% 80%,
-      0% 93%,
-      0% 100%,
-      100% 100%,
-      92% 92%,
-      100% 93%,
-      100% 0%,
-      0% 0%,
-      0% 8%
-    );
-  }
-
-  .testimonialscroll {
-    position: relative;
-    width: 50%;
-    height: 15rem;
-    z-index: 9999;
-  }
-
-  .testimonialscroll div {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #6c7f24;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    color: #37420f;
-    font-weight: bold;
-    border-radius: 10px;
-    opacity: 0;
-    transform: translateX(100%) rotate(-15deg);
-    transition: transform 300ms ease-in-out;
-    z-index: 9;
-  }
-
-  .testimonialscroll div.active {
-    opacity: 1;
-    transform: translateX(0) rotate(0);
-  }
-
-  .testimonialscroll div.prev {
-    opacity: 0;
-    transform: translateX(100%) rotate(0);
-  }
-
-  .testimonialcard {
-    width: 100%;
-    height: 100%;
-    position: relative;
-  }
-
-  .testimonialscroll div::before {
-    content: "";
-    position: absolute;
-    top: -0.3rem;
-    left: -0.2rem;
-    width: 100%;
-    height: 100%;
-    background-color: #f1e8d6;
-    border-radius: 10px;
-    z-index: -1;
-  }
-
-  input[type="date"]::-webkit-calendar-picker-indicator {
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 24 24"><path fill="%23bbbbbb" d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/></svg>');
-  }
-
-  @media screen and (max-width: 800px) {
-    .testimonial {
-      width: 100%;
-      height: 48rem;
+    .imageclippath {
+      width: 25rem;
+      height: 30rem;
       position: relative;
     }
 
-    @keyframes scalebanner {
-      from {
+    .imageclippath::before {
+      content: "";
+      position: absolute;
+      border-radius: 20px;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 90%;
+      background: #6c7f24;
+
+      clip-path: polygon(
+        0% 12%,
+        7% 20%,
+        0% 15%,
+        0% 85%,
+        8% 82%,
+        0% 90%,
+        0% 100%,
+        100% 100%,
+        96% 94%,
+        100% 94%,
+        100% 0%,
+        0% 0%,
+        0% 8%
+      );
+    }
+
+    @supports not (animation-timeline: scroll()) {
+      .hero-fruits span:nth-child(1) {
+        transform: translate(-280px, -150px);
+      }
+
+      .hero-fruits span:nth-child(2) {
+        transform: translate(180px, -130px);
+      }
+
+      .hero-fruits span:nth-child(3) {
+        transform: translate(-260px, -70px);
+      }
+
+      .hero-fruits span:nth-child(4) {
+        transform: translate(130px, -30px);
+      }
+
+      .hero-fruits span:nth-child(5) {
+        transform: translate(-250px, 20px);
+      }
+
+      .hero-fruits span:nth-child(6) {
+        transform: translate(180px, -10px) rotate(-30deg);
+      }
+
+      .hero-fruits span:nth-child(7) {
+        transform: translate(-160px, 120px);
+      }
+
+      .hero-fruits span:nth-child(8) {
+        transform: translate(-80px, 130px) scale(-1, 1);
+      }
+
+      .tray span {
+        transform: translateY(100%);
+      }
+    }
+
+    @supports (animation-timeline: scroll()) {
+      html {
+        scroll-timeline: --scrollwell y;
+      }
+
+      .herowrapper {
+        /* overflow-y: scroll; */
+      }
+
+      .hero-fruits span {
+        transition: all 1s;
         transform: scale(1);
+        animation: scrollTo 1s calc(var(--a) * 100ms) linear forwards;
+        /* animation-timeline: --scrollwell;
+    animation-range: 0vh 90vh; */
       }
-      to {
-        transform: scale(1);
+
+      .hero-fruits span:nth-child(1) {
+        animation: scroller auto both;
+      }
+
+      .hero-fruits span:nth-child(2) {
+        animation: scroller2 auto both;
+      }
+
+      .hero-fruits span:nth-child(3) {
+        animation: scroller3 auto both;
+      }
+
+      .hero-fruits span:nth-child(4) {
+        animation: scroller4 auto both;
+      }
+
+      .hero-fruits span:nth-child(5) {
+        animation: scroller5 auto both;
+      }
+
+      .hero-fruits span:nth-child(6) {
+        animation: scroller6 auto both;
+      }
+
+      .hero-fruits span:nth-child(7) {
+        animation: scroller7 auto both;
+      }
+
+      .hero-fruits span:nth-child(8) {
+        animation: scroller8 auto both;
+      }
+
+      .tray span {
+        animation: scroller9 auto both;
+      }
+
+      .whoweare-img {
+        animation: revealimage auto both;
+      }
+
+      .sponsors svg {
+        animation: revealsvglogos auto both;
+        animation-timeline: --scrollwell;
+        animation-range: 10vh 90vh;
+      }
+
+      .whoweare > .tag > p,
+      .whoweare span img,
+      .whoweare > .title > h3,
+      .whoweare-text > p {
+        animation: revealtext auto both;
+      }
+
+      .whoweare > .tag > p,
+      .whoweare span img,
+      .whoweare > .title > h3,
+      .whoweare-text > p,
+      .whoweare-img {
+        animation-timeline: --scrollwell;
+        animation-range: 50vh 180vh;
+      }
+
+      .meetfarmers-img {
+        animation: revealimage auto both;
+      }
+
+      .meetfarmers-star,
+      .meetfarmers-tag {
+        animation: revealtext auto linear both;
+      }
+
+      .meetfarmers-star,
+      .meetfarmers-tag,
+      .meetfarmers-img {
+        animation-timeline: --scrollwell;
+        animation-range: 10vh 300vh;
+      }
+
+      .banner-section {
+        animation: scalebanner auto linear;
+        animation-timeline: --scrollwell;
+        animation-range: 70vh 200vh;
+      }
+
+      .marketscale {
+        animation: scalebanner auto both;
+        animation-timeline: --scrollwell;
+        animation-range: 500vh 850vh;
+      }
+
+      @keyframes revealsvglogos {
+        from {
+          transform: translateX(-100%);
+        }
+      }
+
+      @keyframes scroller {
+        from {
+          transform: translate(-280px, -150px);
+        }
+
+        to {
+          transform: translate(-120px, 200px);
+        }
+      }
+
+      @keyframes scroller2 {
+        from {
+          transform: translate(180px, -130px);
+        }
+
+        to {
+          transform: translate(60px, 200px);
+        }
+      }
+
+      @keyframes scroller3 {
+        from {
+          transform: translate(-260px, -70px);
+        }
+
+        to {
+          transform: translate(-100px, 250px);
+        }
+      }
+
+      @keyframes scroller4 {
+        from {
+          transform: translate(130px, -30px);
+        }
+
+        to {
+          transform: translate(30px, 230px);
+        }
+      }
+
+      @keyframes scroller5 {
+        from {
+          transform: translate(-250px, 20px);
+        }
+
+        to {
+          transform: translate(-30px, 270px);
+        }
+      }
+
+      @keyframes scroller6 {
+        from {
+          transform: translate(180px, -10px) rotate(-30deg);
+        }
+
+        to {
+          transform: translate(30px, 230px) rotate(-60deg);
+        }
+      }
+
+      @keyframes scroller7 {
+        from {
+          transform: translate(-160px, 120px);
+        }
+
+        to {
+          transform: translate(-50px, 220px);
+        }
+      }
+
+      @keyframes scroller8 {
+        from {
+          transform: translate(-80px, 130px) scale(-1, 1);
+        }
+
+        to {
+          transform: translate(-80px, 170px) scale(-1, 1) rotate(15deg);
+        }
+      }
+
+      @keyframes scroller9 {
+        from {
+          transform: translateY(100%);
+        }
+      }
+
+      @keyframes revealtext {
+        from {
+          transform: translateY(100%);
+        }
+      }
+
+      @keyframes revealimage {
+        from {
+          clip-path: inset(0% 60% 0% 53%);
+        }
+        to {
+          clip-path: inset(-15% 0% 0% 0%);
+        }
+      }
+
+      @keyframes scalebanner {
+        from {
+          transform: scale(1.3);
+        }
+        to {
+          transform: scale(1);
+        }
+      }
+
+      .hero-fruits span:nth-child(1),
+      .hero-fruits span:nth-child(2),
+      .hero-fruits span:nth-child(3),
+      .hero-fruits span:nth-child(4),
+      .hero-fruits span:nth-child(5),
+      .hero-fruits span:nth-child(6),
+      .hero-fruits span:nth-child(7),
+      .hero-fruits span:nth-child(8),
+      .tray span {
+        animation-timeline: --scrollwell;
+        animation-range: 0vh 25vh;
+      }
+
+      @keyframes scrollTo {
+        from {
+          position: absolute;
+          top: 50%;
+          left: 40%;
+          right: 50%;
+          bottom: 50%;
+
+          transform: scale(0.2);
+          transition: all 1s;
+        }
       }
     }
 
-    @keyframes scroller {
-      from {
-        transform: translate(-180px, -10px) scale(0.6);
-      }
-
-      to {
-        transform: translate(-120px, 200px);
-      }
+    .imageclippath::after {
+      content: "";
+      position: absolute;
+      border-radius: 20px;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 90%;
+      background: #37420f;
+      clip-path: polygon(
+        0% 8%,
+        7% 18%,
+        0% 15%,
+        0% 83%,
+        12% 80%,
+        0% 93%,
+        0% 100%,
+        100% 100%,
+        92% 92%,
+        100% 93%,
+        100% 0%,
+        0% 0%,
+        0% 8%
+      );
     }
 
-    @keyframes scroller2 {
-      from {
-        transform: translate(130px, -90px) scale(0.7);
-      }
-
-      to {
-        transform: translate(60px, 120px);
-      }
+    .bannerbg {
+      width: 100%;
+      height: 25rem;
+      position: relative;
+      overflow: hidden;
+      border-radius: 20px;
     }
 
-    @keyframes scroller3 {
-      from {
-        transform: translate(-170px, -60px) scale(0.6);
-      }
+    .bannerbg::before {
+      content: "";
+      position: absolute;
+      border-radius: 20px;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #6c7f24;
 
-      to {
-        transform: translate(-120px, 170px);
-      }
+      clip-path: polygon(
+        0% 10%,
+        2% 20%,
+        0% 18%,
+        0% 83%,
+        5% 82%,
+        0% 90%,
+        0% 100%,
+        100% 100%,
+        96% 94%,
+        100% 94%,
+        100% 0%,
+        0% 0%,
+        0% 8%
+      );
     }
 
-    @keyframes scroller4 {
-      from {
-        transform: translate(60px, -30px) scale(0.6);
-      }
+    .bannerbg::after {
+      content: "";
+      position: absolute;
+      border-radius: 20px;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #37420f;
 
-      to {
-        transform: translate(30px, 150px);
-      }
-    }
-
-    @keyframes scroller5 {
-      from {
-        transform: translate(-170px, 10px) scale(0.6);
-      }
-
-      to {
-        transform: translate(-40px, 200px);
-      }
-    }
-
-    @keyframes scroller6 {
-      from {
-        transform: translate(80px, -10px) rotate(-30deg) scale(0.6);
-      }
-
-      to {
-        transform: translate(40px, 170px) rotate(-60deg);
-      }
-    }
-
-    @keyframes scroller7 {
-      from {
-        transform: translate(-110px, 60px) scale(0.6);
-      }
-
-      to {
-        transform: translate(-50px, 150px);
-      }
-    }
-
-    @keyframes scroller8 {
-      from {
-        transform: translate(-80px, 70px) scale(-0.6, 0.6);
-      }
-
-      to {
-        transform: translate(-70px, 100px) scale(-1, 1) rotate(15deg);
-      }
-    }
-
-    .hero-fruits span:nth-child(1) {
-      transform: translate(-180px, -10px) scale(0.6);
-    }
-
-    .hero-fruits span:nth-child(2) {
-      transform: translate(130px, -90px) scale(0.7);
-    }
-
-    .hero-fruits span:nth-child(3) {
-      transform: translate(-170px, -60px) scale(0.6);
-    }
-
-    .hero-fruits span:nth-child(4) {
-      transform: translate(60px, -30px) scale(0.6);
-    }
-
-    .hero-fruits span:nth-child(5) {
-      transform: translate(-170px, 10px) scale(0.6);
-    }
-
-    .hero-fruits span:nth-child(6) {
-      transform: translate(80px, -10px) rotate(-30deg) scale(0.6);
-    }
-
-    .hero-fruits span:nth-child(7) {
-      transform: translate(-110px, 60px) scale(0.6);
-    }
-
-    .hero-fruits span:nth-child(8) {
-      transform: translate(-80px, 70px) scale(-0.6, 0.6);
+      clip-path: polygon(
+        0% 10%,
+        3% 18%,
+        0% 18%,
+        0% 80%,
+        7% 80%,
+        0% 93%,
+        0% 92%,
+        100% 100%,
+        96% 90%,
+        100% 94%,
+        100% 0%,
+        0% 0%,
+        0% 0%
+      );
     }
 
     .meetImg {
-      width: 100%;
+      width: 22rem;
       height: 25rem;
       position: relative;
       transition: width 300ms;
     }
 
     .meetImg.first {
-      transform: rotate(0deg);
+      transform: rotate(3deg);
     }
 
     .meetImg.second {
-      transform: rotate(0deg);
+      transform: rotate(-3deg);
     }
 
     .meetImg.third {
-      transform: rotate(0deg);
+      transform: rotate(3deg);
+    }
+
+    .meetImg:hover {
+      width: 40rem;
     }
 
     .meetImg:hover img {
@@ -1764,10 +1413,80 @@ const secondarygreen = "#6c7f24";
       top: 0;
     }
 
-    .testimonial {
+    .meetImg:hover .bottomText {
+      display: none;
+    }
+
+    .meetImg:hover .detailText {
+      display: flex;
+    }
+
+    .meetImg.first:hover,
+    .meetImg.second:hover,
+    .meetImg.third:hover {
+      transform: rotate(0deg);
+    }
+
+    .meetImg::before {
+      content: "";
+      position: absolute;
+      border-radius: 20px;
+      top: 0;
+      left: 0;
       width: 100%;
-      height: 47rem;
-      position: relative;
+      height: 100%;
+      background: #6c7f24;
+      clip-path: polygon(
+        0% 12%,
+        7% 20%,
+        0% 15%,
+        0% 85%,
+        8% 82%,
+        0% 90%,
+        0% 100%,
+        100% 100%,
+        96% 94%,
+        100% 94%,
+        100% 0%,
+        0% 0%,
+        0% 8%
+      );
+    }
+
+    .meetImg::after {
+      content: "";
+      position: absolute;
+      border-radius: 20px;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #37420f;
+      clip-path: polygon(
+        0% 8%,
+        7% 18%,
+        0% 15%,
+        0% 83%,
+        12% 80%,
+        0% 93%,
+        0% 100%,
+        100% 100%,
+        92% 92%,
+        100% 93%,
+        100% 0%,
+        0% 0%,
+        0% 8%
+      );
+    }
+
+    .banner-wrapper .bannerbg {
+      transform: scale(1);
+      transition: transform 300ms cubic-bezier(0.03, 0.6, 0.17, 0.91);
+    }
+
+    .banner-wrapper:hover .bannerbg {
+      transform: scale(0.8);
+      transition: transform 300ms cubic-bezier(0.03, 0.6, 0.17, 0.91);
     }
 
     .banner-wrapper:hover .banner-fruits span:nth-child(1) {
@@ -1804,54 +1523,576 @@ const secondarygreen = "#6c7f24";
       transform: translate(18rem, -14rem) rotate(15deg);
       transition: transform 300ms 350ms;
     }
-  }
-</style>
 
-<script>
-  const details = document.querySelectorAll("details");
+    .banner-wrapper .banner-fruits span:nth-child(1),
+    .banner-wrapper .banner-fruits span:nth-child(2),
+    .banner-wrapper .banner-fruits span:nth-child(3),
+    .banner-wrapper .banner-fruits span:nth-child(4),
+    .banner-wrapper .banner-fruits span:nth-child(5),
+    .banner-wrapper .banner-fruits span:nth-child(6),
+    .banner-wrapper .banner-fruits span:nth-child(7) {
+      transform: translate(0, 0);
+      transition: transform 300ms calc(var(--c) * 50ms);
+    }
 
-  const photos = document.querySelectorAll(".photo") as NodeListOf<HTMLSpanElement>;
+    .upcomingevts {
+      width: 100%;
+      height: auto;
+      position: relative;
+      overflow: hidden;
+      border-radius: 20px;
+    }
 
-  let interval: number;
+    .upcomingevts::before {
+      content: "";
+      position: absolute;
+      border-radius: 20px;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #6c7f24;
+      clip-path: polygon(
+        0% 10%,
+        2% 10%,
+        0% 15%,
+        0% 86%,
+        1.5% 89%,
+        0% 91%,
+        0% 100%,
+        100% 100%,
+        100% 90%,
+        98% 85%,
+        100% 80%,
+        100% 0%,
+        0% 0%,
+        0% 8%
+      );
+    }
 
-  details.forEach((detail, idx) => {
-    detail.addEventListener("click", () => {
-      photos.forEach((photo) => (photo.style.display = "none"));
+    .upcomingevts::after {
+      content: "";
+      position: absolute;
+      border-radius: 20px;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #37420f;
 
-      if (photos[idx]) {
-        photos[idx].style.display = "flex";
+      clip-path: polygon(
+        0% 10%,
+        1.5% 14%,
+        0% 18%,
+        0% 84%,
+        2% 89%,
+        0% 93%,
+        0% 92%,
+        0% 100%,
+        100% 100%,
+        100% 92%,
+        97% 85%,
+        100% 78%,
+        100% 0%,
+        0% 0%,
+        0% 0%
+      );
+    }
+    /* details {
+    padding: 1rem 0;
+  } */
+
+    @supports selector(::details-content) {
+      .warning {
+        display: none;
       }
+    }
+
+    /* Animate all properties on details. This because we change the margin, border, etc when open. */
+    details {
+      transition: all 0.5s ease;
+      background: #6c7f24;
+      color: #f1e8d6;
+    }
+
+    /* Add gap around open details */
+    details[open]:not(:first-child) {
+      margin-top: 1rem;
+    }
+    details[open]:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+
+    /* Add border to all details, but prevent a 2px-looking one when two successive details are collapsed */
+    details {
+      z-index: 99999;
+      border-radius: 20px;
+    }
+    details:not([open]):has(+ details:not(details[open])) {
+      border-bottom-color: #fff;
+    }
+
+    /* Animate all on summmary */
+    summary {
+      transition: all 0.5s ease;
+      padding: 1em 1em;
+    }
+    [open] summary {
+      padding: 1em 1em;
+    }
+
+    summary {
+      color: #f1e8d6;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 18px;
+
+      /* Roll our own marker */
+      display: flex;
+      justify-content: space-between;
+
+      &::marker {
+        content: "";
+      }
+      &::after {
+        content: "";
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgYmFzZVByb2ZpbGU9InRpbnkiIGhlaWdodD0iMjRweCIgaWQ9IkxheWVyXzEiIHZlcnNpb249IjEuMiIgdmlld0JveD0iMCAwIDI0IDI0IiB3aWR0aD0iMjRweCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+PHBhdGggZD0iTTguNTg2LDUuNTg2Yy0wLjc4MSwwLjc4MS0wLjc4MSwyLjA0NywwLDIuODI4TDEyLjE3MSwxMmwtMy41ODUsMy41ODZjLTAuNzgxLDAuNzgxLTAuNzgxLDIuMDQ3LDAsMi44MjggIEM4Ljk3NiwxOC44MDUsOS40ODgsMTksMTAsMTlzMS4wMjQtMC4xOTUsMS40MTQtMC41ODZMMTcuODI5LDEybC02LjQxNS02LjQxNEMxMC42MzQsNC44MDUsOS4zNjYsNC44MDUsOC41ODYsNS41ODZ6Ii8+PC9zdmc+);
+        background-size: cover;
+        width: 1.25rem;
+
+        aspect-ratio: 1;
+        display: block;
+        transform: rotate(90deg);
+        transition: transform 0.5s ease;
+        transform-origin: 50% 50%;
+      }
+      [open] &::after {
+        transform: rotate(270deg);
+      }
+
+      /* Hover state */
+      &:hover {
+        color: #f1e8d6;
+        font-size: 600;
+      }
+    }
+
+    .details-content-wrapper {
+      padding: 0.5em 1em;
+
+      /* We need margin-trim … */
+      :first-child {
+        margin-top: 0;
+      }
+      :last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    ::details-content {
+      transition:
+        all 0.5s ease,
+        content-visibility 0.5s allow-discrete;
+      height: 0;
+      overflow: clip;
+    }
+    @supports (interpolate-size: allow-keywords) {
+      :root {
+        interpolate-size: allow-keywords;
+      }
+
+      [open]::details-content {
+        height: auto;
+        padding-bottom: 0.5em;
+      }
+    }
+    @supports not (interpolate-size: allow-keywords) {
+      [open]::details-content {
+        height: 150px;
+        overflow-y: scroll;
+      }
+    }
+
+    .testimonial {
+      width: 35rem;
+      height: 48rem;
+      position: relative;
+    }
+
+    .testimonial::before {
+      content: "";
+      position: absolute;
+      border-radius: 20px;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 90%;
+      background: #6c7f24;
+      clip-path: polygon(
+        0% 12%,
+        7% 20%,
+        0% 15%,
+        0% 85%,
+        8% 82%,
+        0% 90%,
+        0% 100%,
+        100% 100%,
+        96% 94%,
+        100% 94%,
+        100% 0%,
+        0% 0%,
+        0% 8%
+      );
+    }
+
+    .testimonial::after {
+      content: "";
+      position: absolute;
+      border-radius: 20px;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 90%;
+      background: #37420f;
+      clip-path: polygon(
+        0% 8%,
+        7% 18%,
+        0% 15%,
+        0% 83%,
+        12% 80%,
+        0% 93%,
+        0% 100%,
+        100% 100%,
+        92% 92%,
+        100% 93%,
+        100% 0%,
+        0% 0%,
+        0% 8%
+      );
+    }
+
+    .testimonialscroll {
+      position: relative;
+      width: 50%;
+      height: 15rem;
+      z-index: 9999;
+    }
+
+    .testimonialscroll div {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #6c7f24;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: #37420f;
+      font-weight: bold;
+      border-radius: 10px;
+      opacity: 0;
+      transform: translateX(100%) rotate(-15deg);
+      transition: transform 300ms ease-in-out;
+      z-index: 9;
+    }
+
+    .testimonialscroll div.active {
+      opacity: 1;
+      transform: translateX(0) rotate(0);
+    }
+
+    .testimonialscroll div.prev {
+      opacity: 0;
+      transform: translateX(100%) rotate(0);
+    }
+
+    .testimonialcard {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+    .testimonialscroll div::before {
+      content: "";
+      position: absolute;
+      top: -0.3rem;
+      left: -0.2rem;
+      width: 100%;
+      height: 100%;
+      background-color: #f1e8d6;
+      border-radius: 10px;
+      z-index: -1;
+    }
+
+    input[type="date"]::-webkit-calendar-picker-indicator {
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 24 24"><path fill="%23bbbbbb" d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/></svg>');
+    }
+
+    @media screen and (max-width: 800px) {
+      .testimonial {
+        width: 100%;
+        height: 48rem;
+        position: relative;
+      }
+
+      .bannerbg {
+        width: 100%;
+        height: auto;
+        padding: 2rem 0;
+        position: relative;
+        overflow: hidden;
+        border-radius: 20px;
+      }
+
+      @keyframes woodenfallout {
+        from {
+          transform-origin: top left;
+        }
+        to {
+          transform: rotate(10deg);
+          transform-origin: top left;
+        }
+      }
+
+      @keyframes scalebanner {
+        from {
+          transform: scale(1);
+        }
+        to {
+          transform: scale(1);
+        }
+      }
+
+      @keyframes scroller {
+        from {
+          transform: translate(-180px, -10px) scale(0.6);
+        }
+
+        to {
+          transform: translate(-120px, 200px);
+        }
+      }
+
+      @keyframes scroller2 {
+        from {
+          transform: translate(130px, -90px) scale(0.7);
+        }
+
+        to {
+          transform: translate(60px, 120px);
+        }
+      }
+
+      @keyframes scroller3 {
+        from {
+          transform: translate(-170px, -60px) scale(0.6);
+        }
+
+        to {
+          transform: translate(-120px, 170px);
+        }
+      }
+
+      @keyframes scroller4 {
+        from {
+          transform: translate(60px, -30px) scale(0.6);
+        }
+
+        to {
+          transform: translate(30px, 150px);
+        }
+      }
+
+      @keyframes scroller5 {
+        from {
+          transform: translate(-170px, 10px) scale(0.6);
+        }
+
+        to {
+          transform: translate(-40px, 200px);
+        }
+      }
+
+      @keyframes scroller6 {
+        from {
+          transform: translate(80px, -10px) rotate(-30deg) scale(0.6);
+        }
+
+        to {
+          transform: translate(40px, 170px) rotate(-60deg);
+        }
+      }
+
+      @keyframes scroller7 {
+        from {
+          transform: translate(-110px, 60px) scale(0.6);
+        }
+
+        to {
+          transform: translate(-50px, 150px);
+        }
+      }
+
+      @keyframes scroller8 {
+        from {
+          transform: translate(-80px, 70px) scale(-0.6, 0.6);
+        }
+
+        to {
+          transform: translate(-70px, 100px) scale(-1, 1) rotate(15deg);
+        }
+      }
+
+      .hero-fruits span:nth-child(1) {
+        transform: translate(-180px, -10px) scale(0.6);
+      }
+
+      .hero-fruits span:nth-child(2) {
+        transform: translate(130px, -90px) scale(0.7);
+      }
+
+      .hero-fruits span:nth-child(3) {
+        transform: translate(-170px, -60px) scale(0.6);
+      }
+
+      .hero-fruits span:nth-child(4) {
+        transform: translate(60px, -30px) scale(0.6);
+      }
+
+      .hero-fruits span:nth-child(5) {
+        transform: translate(-170px, 10px) scale(0.6);
+      }
+
+      .hero-fruits span:nth-child(6) {
+        transform: translate(80px, -10px) rotate(-30deg) scale(0.6);
+      }
+
+      .hero-fruits span:nth-child(7) {
+        transform: translate(-110px, 60px) scale(0.6);
+      }
+
+      .hero-fruits span:nth-child(8) {
+        transform: translate(-80px, 70px) scale(-0.6, 0.6);
+      }
+
+      .meetImg {
+        width: 100%;
+        height: 25rem;
+        position: relative;
+        transition: width 300ms;
+      }
+
+      .meetImg.first {
+        transform: rotate(0deg);
+      }
+
+      .meetImg.second {
+        transform: rotate(0deg);
+      }
+
+      .meetImg.third {
+        transform: rotate(0deg);
+      }
+
+      .meetImg:hover img {
+        transform: rotate(0);
+        width: 40%;
+        height: calc(100% - 1rem);
+        transform: translateY(0);
+        top: 0;
+      }
+
+      .testimonial {
+        width: 100%;
+        height: 47rem;
+        position: relative;
+      }
+
+      .banner-wrapper:hover .banner-fruits span:nth-child(1) {
+        transform: translate(-10rem, -13rem);
+        transition: transform 300ms 50ms;
+      }
+
+      .banner-wrapper:hover .banner-fruits span:nth-child(2) {
+        transform: translate(-3rem, -15rem);
+        transition: transform 300ms 100ms;
+      }
+
+      .banner-wrapper:hover .banner-fruits span:nth-child(3) {
+        transform: translate(2rem, -15rem);
+        transition: transform 300ms 150ms;
+      }
+
+      .banner-wrapper:hover .banner-fruits span:nth-child(4) {
+        transform: translate(6rem, -15rem);
+        transition: transform 300ms 200ms;
+      }
+
+      .banner-wrapper:hover .banner-fruits span:nth-child(5) {
+        transform: translate(9rem, -15rem);
+        transition: transform 300ms 250ms;
+      }
+
+      .banner-wrapper:hover .banner-fruits span:nth-child(6) {
+        transform: translate(14rem, -17rem) rotate(15deg);
+        transition: transform 300ms 300ms;
+      }
+
+      .banner-wrapper:hover .banner-fruits span:nth-child(7) {
+        transform: translate(18rem, -14rem) rotate(15deg);
+        transition: transform 300ms 350ms;
+      }
+    }
+  </style>
+
+  <script>
+    const details = document.querySelectorAll("details");
+
+    const photos = document.querySelectorAll(".photo") as NodeListOf<HTMLSpanElement>;
+
+    let interval: number;
+
+    details.forEach((detail, idx) => {
+      detail.addEventListener("click", () => {
+        photos.forEach((photo) => (photo.style.display = "none"));
+
+        if (photos[idx]) {
+          photos[idx].style.display = "flex";
+        }
+      });
     });
-  });
 
-  let index = 0;
-  const slides = document.querySelectorAll(".testimonialscroll div");
+    let index = 0;
+    const slides = document.querySelectorAll(".testimonialscroll div");
 
-  function showNextSlide() {
-    slides[index].classList.remove("active");
-    slides[index].classList.add("prev");
+    function showNextSlide() {
+      slides[index].classList.remove("active");
+      slides[index].classList.add("prev");
 
-    index = (index + 1) % slides.length;
+      index = (index + 1) % slides.length;
 
-    slides[index].classList.remove("prev");
-    slides[index].classList.add("active");
-  }
+      slides[index].classList.remove("prev");
+      slides[index].classList.add("active");
+    }
 
-  function startCarousel() {
-    interval = setInterval(showNextSlide, 5000);
-  }
+    function startCarousel() {
+      interval = setInterval(showNextSlide, 5000);
+    }
 
-  function stopCarousel() {
-    clearInterval(interval);
-  }
+    function stopCarousel() {
+      clearInterval(interval);
+    }
 
-  // Start the carousel when the page loads
-  startCarousel();
+    // Start the carousel when the page loads
+    startCarousel();
 
-  // Stop the interval when the page is unloaded (prevents memory leaks)
-  window.addEventListener("beforeunload", stopCarousel);
+    // Stop the interval when the page is unloaded (prevents memory leaks)
+    window.addEventListener("beforeunload", stopCarousel);
 
-  // OPTIONAL: Pause when hovering over the carousel
-  document.getElementById("carousel")?.addEventListener("mouseenter", stopCarousel);
-  document.getElementById("carousel")?.addEventListener("mouseleave", startCarousel);
-</script>
+    // OPTIONAL: Pause when hovering over the carousel
+    document.getElementById("carousel")?.addEventListener("mouseenter", stopCarousel);
+    document.getElementById("carousel")?.addEventListener("mouseleave", startCarousel);
+  </script>
+</div>
